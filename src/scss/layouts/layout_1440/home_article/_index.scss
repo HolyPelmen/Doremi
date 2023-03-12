@@ -1,0 +1,7 @@
+@import "./vars";
+
+.article-home {
+  background-position: bottom;
+  padding: $homeArticleTopPadding 0 $homeArticleBotPadding $homeArticleLeftPadding;
+  grid-template-rows: 0.4054fr 0.278fr 0.3486fr;
+}

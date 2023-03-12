@@ -1,0 +1,22 @@
+.article-home__search {
+  grid-area: 2 / 1 / 3 / 4;
+  border-radius: rem($borderRadiusForSearchBar);
+  outline: rem(8px) solid getInlineCssVar("50white");
+  @include m(input) {
+    border-radius: rem($borderRadiusForSearchBar);
+    height: rem($homeHeightForSearchbar);
+    padding: rem($paddingsForSearchBarTopBottom) rem($paddingsForSearchBarSides);
+    @include setTextProperties(quicksand, regular, $baseFontSize, lh20);
+  }
+
+  @include m(button) {
+    grid-area: 3 / 2 / 4 / 3;
+    @include unsetAll((margin-top));
+  }
+
+  &::before {
+    @include beforeAfterConstructorSquare(auto, "search-icon-big.svg") {
+      @include positioning(null, $leftPosSearchIcon);
+    }
+  }
+}

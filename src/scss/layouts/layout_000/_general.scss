@@ -1,0 +1,29 @@
+@import "./font-sizes";
+html {
+  @include getCssVar(font-size);
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  @include getCssVar(font-family, lato);
+  font-size: rem($baseFontSize);
+  height: 100%;
+}
+
+.tomato {
+  @include getCssVar(color, tomato);
+}
+
+.bold {
+  @include getCssVar(font-weight, bold);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+@import "rating-star";

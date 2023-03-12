@@ -1,0 +1,4 @@
+.advertisement__stores {
+  @include setFlex(column, center, center, rem($adsGapBetweenButtons));
+  grid-area: 3 / 1 / 5 / 2;
+}

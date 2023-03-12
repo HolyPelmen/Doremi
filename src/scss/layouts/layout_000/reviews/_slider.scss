@@ -1,0 +1,47 @@
+.reviews-slider {
+  @include setFlex(column, center, flex-start, rem($reviewsGap));
+}
+
+@include slider(
+  "reviews-slider",
+  $reviewsCardWidth,
+  $reviewCardHeight,
+  $reviewsCardNumber,
+  white
+) {
+  border: $basicBorder solid getInlineCssVar(light-grey);
+
+  &:before {
+    @include beforeAfterConstructorSquare(auto, "reviews-profile-photo.svg") {
+      position: relative;
+      @include positioning(0);
+    }
+  }
+}
+
+.slides-item {
+  @include e(description) {
+    @include setTextProperties(lato, regular, $cardDesctiptionSize, lh26);
+  }
+
+  @include e(main) {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: rem($reviewsCardMainColumnGap);
+    grid-row-gap: rem($reviewsCardMainRowGap);
+    @include m(name) {
+      @include setTextProperties(quicksand, bold, $smallCardNameSize, lh22);
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    @include m(title) {
+      @include setTextProperties(quicksand, regular, $cardTitleSize, lh17);
+      grid-area: 2 / 1 / 3 / 2;
+    }
+  }
+
+  .rate {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}

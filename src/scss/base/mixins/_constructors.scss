@@ -1,0 +1,244 @@
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &-#{$modifier} {
+    @content;
+  }
+}
+
+@mixin mq($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin noselect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin font($f, $s, $w: "") {
+  font: #{$w} $s $f;
+}
+
+@mixin setCssVar($cssProp, $val) {
+  $prefix: if(variable-exists(prefix), #{$prefix}, "");
+  --#{$prefix}#{$cssProp}: #{$val};
+}
+
+@mixin getCssVar($cssProp, $cssVar: $cssProp) {
+  $prefix: if(variable-exists(prefix), #{$prefix}, "");
+  #{$cssProp}: var(--#{$prefix}#{$cssVar});
+}
+
+@mixin beforeAfterConstructorRect($width, $height, $fileName: false) {
+  @if ($fileName != false AND str-ends-with(&fileName, ".svg")) {
+    $contentVar: svg($fileName);
+    content: $contentVar;
+  } @else if ($fileName != false) {
+    $contentVar: image($fileName);
+    content: $contentVar;
+  } @else {
+    content: "";
+  }
+
+  position: absolute;
+  height: $height;
+  width: $width;
+  @content;
+}
+
+@mixin beforeAfterConstructorSquare($width, $fileName: false) {
+  @if ($fileName != false AND str-ends-with(&fileName, ".svg")) {
+    $contentVar: svg($fileName);
+    content: $contentVar;
+  } @else if ($fileName != false) {
+    $contentVar: image($fileName);
+    content: $contentVar;
+  } @else {
+    content: "";
+  }
+
+  position: absolute;
+  height: $width;
+  width: $width;
+  @content;
+}
+
+@mixin positioning($top: null, $left: null, $bottom: null, $right: null) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin setFlex($direction: row, $justify: flex-start, $align: flex-start, $gaps: 0) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-items: $align;
+  gap: $gaps;
+  @content;
+}
+
+@mixin resetAllToZero($array) {
+  @each $property in $array {
+    #{$property}: 0;
+  }
+}
+
+@mixin unsetAll($array) {
+  @each $property in $array {
+    #{$property}: unset;
+  }
+}
+
+@mixin setTextProperties($fontFamily, $fontWeight, $fontSize, $lineHeight: null) {
+  @include getCssVar(font-family, $fontFamily);
+  @include getCssVar(font-weight, $fontWeight);
+  font-size: rem($fontSize);
+  @if ($lineHeight != null) {
+    @include getCssVar(line-height, $lineHeight);
+  }
+}
+
+@mixin nthOfTypePseudo($n, $pseudo) {
+  $p: "::#{$pseudo}";
+  &:nth-of-type(#{$n})#{$p} {
+    @content;
+  }
+}
+
+@mixin articleStart() {
+  position: relative;
+  &::before {
+    @include beforeAfterConstructorRect(rem($widthOfHeadingLines), 0) {
+      border: rem($basicBorder) solid getInlineCssVar(tomato);
+      @include positioning(
+        $topPositioningForHeadingLines,
+        $sidesPositioningForHeadingLines
+      );
+    }
+  }
+  &::after {
+    @include beforeAfterConstructorRect(rem($widthOfHeadingLines), 0) {
+      border: rem($basicBorder) solid getInlineCssVar(tomato);
+      @include positioning(
+        $topPositioningForHeadingLines,
+        null,
+        null,
+        $sidesPositioningForHeadingLines
+      );
+    }
+  }
+  @content;
+}
+
+// Construct for creating sliders
+@mixin slider($slider, $cardWidth, $cardHeight, $numberOfCards, $cardBackgroundColor) {
+  .#{$slider} {
+    @include e(radio) {
+      position: fixed;
+      top: -999vw;
+      left: -999vw;
+      opacity: 0;
+    }
+
+    @include e(slides) {
+      @include setFlex(row, space-between);
+      @include unsetAll((margin));
+      max-width: calc($cardWidth * $numberOfCards);
+      padding-left: calc(50% - ($cardWidth / 2));
+      transition: 0.8s cubic-bezier(0.5, -0.1, 0.1, 1);
+
+      @include m(item) {
+        @include setFlex(column, flex-end, center);
+        @include getCssVar(padding-top, #{$slider}-top);
+        @include getCssVar(padding-right, #{$slider}-right);
+        @include getCssVar(padding-bottom, #{$slider}-bottom);
+        @include getCssVar(padding-left, #{$slider}-left);
+        @include getCssVar(background, #{$cardBackgroundColor});
+        height: rem($cardHeight);
+        min-width: rem($cardWidth);
+        transform: scale(0.85);
+        border-radius: $cardBorderRadius;
+        transition: 0.8s cubic-bezier(0.5, -0.1, 0.1, 1);
+
+        @content;
+      }
+    }
+
+    @include e(thumbnails) {
+      @include setFlex(row, space-around, center);
+      position: relative;
+      @include positioning(null, 50%);
+      @include unsetAll((padding, margin));
+      transform: translateX(-50%);
+      width: ($thumbnailWidth * $numberOfCards) * 1.5;
+      z-index: 3;
+
+      @include m(item) {
+        @include getCssVar(background, thumbnail-unselect);
+        height: $thumbnailHeight;
+        width: $thumbnailWidth;
+        transform: scale(0.85);
+        transition: 0.3s cubic-bezier(0.3, -0.1, 0.1, 1.1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  @for $index from 1 through $numberOfCards {
+    [id="#{$slider}-#{$index}"]:checked {
+      & ~ .#{$slider}__slides {
+        transform: translateX(calc($cardWidth * (#{-$index} + 1)));
+      }
+
+      & ~ .#{$slider}__slides [for="#{$slider}-#{$index}"] {
+        box-shadow: 0px 0px 25px getInlineCssVar(selected-slide-shadow);
+        transform: scale(1);
+      }
+
+      & ~ .#{$slider}__thumbnails [for="#{$slider}-#{$index}"] {
+        @include getCssVar(background, tomato);
+      }
+    }
+  }
+}
+
+@mixin unsetSlider($slider, $numberOfCards) {
+  @for $index from 1 through $numberOfCards {
+    [id="#{$slider}-#{$index}"]:checked {
+      & ~ .#{$slider}__slides {
+        transform: unset;
+      }
+
+      & ~ .#{$slider}__slides [for="#{$slider}-#{$index}"] {
+        box-shadow: none;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@mixin baseButton {
+  @include getCssVar(background-color, tomato);
+  @include getCssVar(color, white);
+  padding: 0.5em 2em;
+  min-height: rem($minHeightForButton);
+  border-radius: rem($borderRadiusForButton);
+  text-transform: uppercase;
+  cursor: pointer;
+  @content;
+
+  &:hover {
+    @include getCssVar(background-color, light-tomato);
+  }
+}

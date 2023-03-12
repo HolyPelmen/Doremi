@@ -1,0 +1,8 @@
+.rental__step {
+  @include nthOfTypePseudo(2, after) {
+    left: 22vw;
+  }
+  @include nthOfTypePseudo(3, after) {
+    left: 22vw;
+  }
+}

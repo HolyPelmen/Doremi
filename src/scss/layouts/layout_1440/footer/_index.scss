@@ -1,0 +1,52 @@
+@import "./vars";
+@import "./logo";
+@import "./social";
+@import "./link-blocks";
+
+.footer {
+  position: relative;
+  grid-template-columns: minmax(auto, 13.64vw) repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap: rem($footerRowGaps);
+  grid-column-gap: rem($footerColGap);
+
+  @include e(description) {
+    grid-area: 2 / 1 / 3 / 2;
+    align-self: start;
+    margin: unset;
+  }
+
+  @include e(address) {
+    @include m(info) {
+      grid-area: 3 / 1 / 4 / 2;
+      align-self: start;
+    }
+  }
+
+  @include e(community) {
+    display: contents;
+    grid-area: 1 / 4 / 2 / 5;
+    @include m(heading) {
+      grid-area: 1 / 4 / 2 / 5;
+      align-self: end;
+    }
+
+    @include m(description) {
+      grid-area: 2 / 4 / 3 / 5;
+      align-self: start;
+    }
+  }
+
+  @include e(app-stores) {
+    grid-area: 2 / 4 / 3 / 5;
+    align-self: center;
+  }
+
+  @include e(separator) {
+    bottom: rem($footerSeparatorDistance);
+  }
+
+  @include e(copy) {
+    bottom: rem($footerCopyDistance);
+  }
+}

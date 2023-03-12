@@ -1,0 +1,5 @@
+.reviews__title {
+  @include setTextProperties(lato, regular, $baseFontSize, lh17);
+  @include articleStart;
+  margin-bottom: calculateNegativeMargin($reviewsGapHeadingContent, $reviewsGap);
+}

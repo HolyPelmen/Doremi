@@ -1,0 +1,9 @@
+@import "./vars";
+@import "./introduce-content";
+@import "./search-bar";
+@import "./searches-categories";
+
+.article-home {
+  padding-left: rem($articleSidesPadding);
+  padding-right: rem($articleSidesPadding);
+}

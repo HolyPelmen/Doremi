@@ -1,0 +1,15 @@
+@import "./vars";
+@import "./heading";
+@import "./description_content";
+@import "./slider";
+
+.featured {
+  @include setFlex(column, flex-start, center, rem($featuredContentCardGap));
+
+  @include e(cta) {
+    @include baseButton {
+      @include setTextProperties(quicksand, bold, $bigButtonSize, lh22);
+      @include setFlex(row, center, center);
+    }
+  }
+}

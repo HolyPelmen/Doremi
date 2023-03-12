@@ -1,0 +1,8 @@
+@import "./vars";
+@import "./description_content";
+@import "./slider";
+
+.product-categories {
+  padding: rem($categoriesTopPadding) rem($cateforiesSidesPadding)
+    rem($categoriesBottomPadding);
+}

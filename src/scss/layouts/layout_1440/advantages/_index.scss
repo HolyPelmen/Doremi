@@ -1,0 +1,18 @@
+@import "./vars";
+@import "./sections";
+
+.advantages {
+  display: grid;
+  grid-template-columns: minmax(auto, rem($advantagesMaxContentWidth)) rem(
+      $advantagesImageWidth
+    );
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: rem($advantagesColGap);
+  grid-row-gap: rem($advantagesRowGap);
+  &::after {
+    @include beforeAfterConstructorSquare(auto, "adv-image.svg") {
+      position: static;
+      grid-area: 1 / 2 / 5 / 3;
+    }
+  }
+}

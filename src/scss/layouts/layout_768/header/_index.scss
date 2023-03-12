@@ -1,0 +1,8 @@
+@import "./header-vars";
+@import "./header-logo";
+@import "./header-menu";
+
+.header {
+  padding: rem($headerPaddingForTop) rem($headerPaddingLeft) rem($headerPaddingForBottom)
+    rem($headerPaddingRight);
+}

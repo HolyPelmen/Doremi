@@ -1,0 +1,25 @@
+.article-home__list {
+  @include setFlex(row, center, center, rem($categoriesGaps));
+  @include resetAllToZero((padding));
+  list-style: none;
+  width: fit-content;
+  margin-top: rem(calculateNegativeMargin($categoriesTopPadding, $maxGapBetweenElements));
+
+  @include m(item) {
+    position: relative;
+    &:hover::before {
+      @include beforeAfterConstructorRect(auto, auto, "search-hover-effect.svg");
+      @include positioning(100%, -50%);
+    }
+  }
+
+  @include m(button) {
+    &:hover circle {
+      @include getCssVar(fill, tomato);
+    }
+
+    &:hover path {
+      @include getCssVar(fill, white);
+    }
+  }
+}

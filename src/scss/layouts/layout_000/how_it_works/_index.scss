@@ -1,0 +1,9 @@
+@import "./vars";
+@import "./heading";
+@import "./how_it_works-content";
+@import "./step";
+
+.rental {
+  @include setFlex(column, flex-start, center, rem($gapBetweenRentalArticle));
+  padding-bottom: rem($bottomPaddingForArticle);
+}

@@ -1,0 +1,10 @@
+@import "./vars";
+@import "./heading";
+@import "./how_it_works-content";
+@import "./step";
+
+.rental {
+  grid-template-columns: 0.268fr 0.463fr 0.268fr;
+  grid-template-rows: 0.0242fr 0.172fr 1.7fr;
+  @include unsetAll((grid-column-gap, min-height));
+}

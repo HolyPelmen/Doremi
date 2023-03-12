@@ -1,0 +1,7 @@
+@import "./vars";
+@import "./social";
+@import "./link-blocks";
+
+.footer {
+  grid-template-columns: 0.52fr 0.24fr 0.24fr;
+}

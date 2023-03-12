@@ -1,0 +1,25 @@
+.rental__step {
+  &:nth-of-type(2) {
+    grid-area: 3 / 1 / 4 / 2;
+    align-self: end;
+  }
+  &:nth-of-type(3) {
+    grid-area: 3 / 2 / 4 / 3;
+    align-self: end;
+  }
+  &:nth-of-type(4) {
+    grid-area: 4 / 1 / 5 / 2;
+    align-self: end;
+  }
+  @include nthOfTypePseudo(2, after) {
+    @include positioning(70%, 96%);
+    transform: rotate(-85deg) scaleX(-1);
+  }
+  @include nthOfTypePseudo(3, after) {
+    @include positioning(150%, 0);
+    transform: rotate(25deg);
+  }
+  @include m(text) {
+    @include getCssVar(font-family, quicksand);
+  }
+}

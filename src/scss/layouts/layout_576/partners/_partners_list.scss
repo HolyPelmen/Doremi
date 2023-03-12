@@ -1,0 +1,9 @@
+.partners__list {
+  grid-template-columns: repeat(3, minmax(150px, 220px));
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: rem($partnersColumnGap);
+  grid-row-gap: rem($partnersRowGap);
+  @include m(item) {
+    width: unset;
+  }
+}

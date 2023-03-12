@@ -1,0 +1,8 @@
+@import "./vars";
+@import "./search-bar";
+@import "./popular-searches";
+@import "./searches-categories";
+
+.article-home {
+  grid-template-rows: 0.3054fr 0.1784fr 0.3486fr;
+}

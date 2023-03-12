@@ -1,0 +1,14 @@
+@import "./vars";
+@import "./heading";
+@import "./description_content";
+@import "./slider";
+
+.product-categories {
+  @include setFlex(column, flex-start, center, rem($categoriesGap));
+  padding: rem($categoriesTopPadding) 0 rem($categoriesBottomPadding);
+  margin-bottom: $categoriesBottomMargin;
+  background: svg("backgrounds/popcat-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,68 @@
+.rental__step {
+  max-width: $maxWidthOfStep;
+  position: relative;
+  @include positioning(0);
+  @include setFlex(column, center, flex-start, rem($stepGap));
+  &:nth-child(3) {
+    margin-top: calculateNegativeMargin(
+      $distanceBetweenMainArticleAnd1stSection,
+      $gapBetweenRentalArticle
+    );
+  }
+  @include nthOfTypePseudo(2, before) {
+    @include beforeAfterConstructorRect(auto, auto, "rental-find.svg") {
+      @include positioning(
+        null,
+        null,
+        rem($bottomPositioningForBefore),
+        rem($rightPositioningForBefore)
+      );
+    }
+    z-index: 1;
+  }
+  @include nthOfTypePseudo(2, after) {
+    @include beforeAfterConstructorRect(auto, auto, "arrow.svg");
+    @include positioning(83%, 80%);
+    transform: rotate(3deg);
+  }
+  @include nthOfTypePseudo(3, before) {
+    @include beforeAfterConstructorRect(auto, auto, "rental-seller.svg") {
+      @include positioning(
+        null,
+        null,
+        rem($bottomPositioningForBefore),
+        rem($rightPositioningForBefore + $difBetween1and2StepImage)
+      );
+    }
+    z-index: 1;
+  }
+  @include nthOfTypePseudo(3, after) {
+    @include beforeAfterConstructorRect(auto, auto, "arrow.svg");
+    @include positioning(83%, 80%);
+    transform: rotate(3deg);
+  }
+  @include nthOfTypePseudo(4, before) {
+    @include beforeAfterConstructorRect(auto, auto, "rental-community.svg") {
+      @include positioning(
+        null,
+        null,
+        rem($bottomPositioningForBefore),
+        rem($rightPositioningForBefore + $difBetween1and3StepImage)
+      );
+    }
+    z-index: 1;
+  }
+  @include m(heading) {
+    @include setTextProperties(nunito, semibold, $stepHeaderSize, hl27);
+    @include resetAllToZero((margin));
+    position: relative;
+    z-index: 2;
+  }
+
+  @include m(text) {
+    @include setTextProperties(lato, regular, $stepDescSize, lh26);
+    @include resetAllToZero((margin));
+    position: relative;
+    z-index: 2;
+  }
+}

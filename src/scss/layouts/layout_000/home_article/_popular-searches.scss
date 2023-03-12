@@ -1,0 +1,21 @@
+.article-home__popular-searches {
+  @include setFlex(column, center, center);
+  @include m(header) {
+    @include setTextProperties(quicksand, bold, $baseFontSize, lh16);
+    @include resetAllToZero((margin));
+    width: fit-content;
+  }
+
+  @include m(cta) {
+    @include setTextProperties(quicksand, bold, $baseFontSize, lh20);
+    @include resetAllToZero((margin));
+    width: fit-content;
+
+    @include m(link) {
+      @include getCssVar(color, tomato);
+      &:hover {
+        @include getCssVar(color, light-tomato);
+      }
+    }
+  }
+}

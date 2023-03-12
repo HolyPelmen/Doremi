@@ -1,0 +1,8 @@
+@import "./vars";
+@import "./heading";
+@import "./slider";
+
+.featured {
+  padding: 0 rem($featuredSidesPadding);
+  margin: rem($featuredTopBotMargins) 0;
+}

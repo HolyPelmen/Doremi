@@ -1,0 +1,8 @@
+.reviews__title {
+  @include articleStart {
+    &::after,
+    &::before {
+      border-color: getInlineCssVar(soft-blue);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.partners__list {
+  padding: 0 rem($partnersTableSidePadding);
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, minmax(auto, rem($partnersMaxHeight)));
+  grid-column-gap: rem($partnersColumnGap);
+  grid-row-gap: rem($partnersRowGap);
+
+  @include m(item) {
+    border: $basicBorder solid getInlineCssVar(light-grey);
+    border-radius: $cardBorderRadius;
+    display: grid;
+    place-items: center;
+    & > svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

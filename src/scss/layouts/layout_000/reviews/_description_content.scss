@@ -1,0 +1,11 @@
+.reviews__content {
+  text-align: center;
+  @include m(heading) {
+    @include setTextProperties(nunito, bold, $mediumHeaderSize, lh44);
+    @include unsetAll((margin-top));
+  }
+
+  @include m(description) {
+    @include setTextProperties(lato, regular, $smallSubheaderSize, lh26);
+  }
+}

@@ -1,0 +1,9 @@
+.article-home__search {
+  @include m(button) {
+    grid-area: 2 / 3 / 3 / 4;
+    margin-right: rem($buttonRightMargin);
+    max-width: rem($buttonMaxWidth);
+    z-index: 1;
+    justify-self: end;
+  }
+}

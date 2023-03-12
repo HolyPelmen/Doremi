@@ -1,0 +1,7 @@
+.partners__list {
+  justify-items: center;
+
+  @include m(item) {
+    width: rem($partnersCardWidth);
+  }
+}

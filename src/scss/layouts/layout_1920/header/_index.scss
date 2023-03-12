@@ -1,0 +1,6 @@
+@import "./header-vars";
+@import "./header-logo";
+
+.header {
+  padding: rem($headerPaddingForTop) rem($headerPaddingSides) rem($headerPaddingForBottom);
+}

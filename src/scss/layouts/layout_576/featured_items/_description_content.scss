@@ -1,0 +1,9 @@
+.featured__content {
+  @include m(title) {
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh49);
+  }
+
+  @include m(subtext) {
+    @include setTextProperties(lato, regular, $smallSubheaderSize, lh26);
+  }
+}

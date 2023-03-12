@@ -1,0 +1,16 @@
+@include slider(
+  "featured-carousel",
+  $featuredCardWidth,
+  $featuredCardHeight,
+  $featuredNumberOfCards,
+  light-grey
+);
+
+.featured-carousel {
+  gap: rem($featuredSliderThumbnailGap);
+  @include e(slides) {
+    @include m(item) {
+      align-items: flex-start;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "./vars";
+@import "./heading";
+@import "./sections";
+
+.advantages {
+  padding-left: $advantagesLeftPadding;
+  padding-right: $advantagesRightPadding;
+}

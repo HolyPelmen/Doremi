@@ -1,0 +1,43 @@
+.rental__step {
+  max-width: $maxWidthOfStep;
+  @include nthOfTypePseudo(2, before) {
+    @include beforeAfterConstructorRect(auto, auto, "rental-find-big.svg") {
+      @include positioning(
+        null,
+        null,
+        rem($bottomPositioningForBefore),
+        rem($rightPositioningForBeforeFirst)
+      );
+    }
+  }
+
+  @include nthOfTypePseudo(3, before) {
+    @include beforeAfterConstructorRect(auto, auto, "rental-seller-big.svg") {
+      @include positioning(
+        null,
+        null,
+        rem($bottomPositioningForBefore),
+        rem($rightPositioningForBeforeSecond)
+      );
+    }
+  }
+
+  @include nthOfTypePseudo(4, before) {
+    @include beforeAfterConstructorRect(auto, auto, "rental-community-big.svg") {
+      @include positioning(
+        null,
+        null,
+        rem($bottomPositioningForBefore),
+        rem($rightPositioningForBeforeThird)
+      );
+    }
+  }
+
+  @include m(heading) {
+    @include setTextProperties(nunito, semibold, $stepHeaderSize, lh27);
+  }
+
+  @include m(text) {
+    @include setTextProperties(lato, regular, $stepDescSize, lh26);
+  }
+}

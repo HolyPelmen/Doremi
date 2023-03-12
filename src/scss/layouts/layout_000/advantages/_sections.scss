@@ -1,0 +1,35 @@
+.advantages__section {
+  text-align: center;
+  @include m(subtitle) {
+    @include setTextProperties(nunito, bold, $stepHeaderSize, lh27);
+    margin: rem($marginsForSubtitles) 0;
+    padding: 0 rem($sidePaddingsForText);
+  }
+
+  @include m(description) {
+    @include setTextProperties(lato, regular, $stepDescSize, lh17);
+    @include unsetAll((margin));
+    padding: 0 rem($sidePaddingsForText);
+  }
+
+  @include nthOfTypePseudo(1, before) {
+    @include beforeAfterConstructorSquare(auto, "exchange.svg") {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  @include nthOfTypePseudo(2, before) {
+    @include beforeAfterConstructorSquare(auto, "gambling.svg") {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  @include nthOfTypePseudo(3, before) {
+    @include beforeAfterConstructorSquare(auto, "calc.svg") {
+      display: inline-block;
+      position: relative;
+    }
+  }
+}

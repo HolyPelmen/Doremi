@@ -1,0 +1,74 @@
+@import "./vars";
+@import "./logo";
+@import "./social";
+@import "./link-blocks";
+
+.footer {
+  @include getCssVar(background-color, "alice-blue");
+  @include setFlex(column, center, center, rem($footerGap));
+  padding: rem($footerPaddingTop) rem($footerPaddingRight) rem($footerPaddingBottom)
+    rem($footerPaddingLeft);
+  letter-spacing: $footerLetterSpacing;
+
+  @include e(description) {
+    @include setTextProperties(quicksand, regular, $baseFontSize, lh26);
+    margin-top: rem(calculateNegativeMargin($footerDescriptionTopMargin, $footerGap));
+    margin-bottom: rem(
+      calculateNegativeMargin($footerDescriptionBottomMargin, $footerGap)
+    );
+  }
+
+  @include e(address) {
+    @include unsetAll((font-style));
+
+    @include m(info) {
+      @include unsetAll((padding, margin));
+      list-style: none;
+      @include m(item) {
+        @include setTextProperties(quicksand, regular, $baseFontSize, lh26);
+      }
+    }
+  }
+
+  @include e(link) {
+    @include getCssVar(color, black);
+    text-decoration: none;
+  }
+
+  @include e(community) {
+    @include m(heading) {
+      @include setTextProperties(quicksand, semibold, $footerCommunitySize, lh30);
+      margin-top: rem($footerCommunityTopMargin);
+    }
+
+    @include m(description) {
+      @include setTextProperties(quicksand, regular, $baseFontSize, lh32);
+    }
+  }
+
+  @include e(app-stores) {
+    @include unsetAll((padding));
+    @include setFlex(row, center, center, rem($footerStoresGap));
+    list-style: none;
+    margin: rem($footerStoresMargin) 0;
+    @include m(item) {
+      & > .footer__store-button > img {
+        max-width: rem($footerStoresMaxWidth);
+      }
+    }
+  }
+
+  @include e(separator) {
+    width: 122%;
+    border: $basicBorder solid getInlineCssVar(semilight-grey);
+    position: relative;
+    @include positioning(null, rem(-$footerPaddingLeft));
+  }
+
+  @include e(copy) {
+    @include setTextProperties(lato, light, $footerCopy, lh22);
+    text-align: center;
+    padding: 0 rem($footerCopyrightsPaddingSide);
+    margin-top: rem(calculateNegativeMargin($footerCopyrightsTopMargin, $footerGap));
+  }
+}

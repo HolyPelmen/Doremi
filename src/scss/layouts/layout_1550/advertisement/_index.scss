@@ -1,0 +1,12 @@
+@import "./vars";
+@import "./links";
+
+.advertisement {
+  grid-template-rows: min-content min-content 1fr;
+  grid-template-columns: minmax(auto, rem($adsMaxSize1stCol)) minmax(
+      auto,
+      rem($adsMaxSize2ndCol)
+    );
+  place-content: center;
+  grid-row-gap: rem($adsRowGap);
+}

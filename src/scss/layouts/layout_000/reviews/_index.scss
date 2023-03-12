@@ -1,0 +1,9 @@
+@import "./vars";
+@import "./heading";
+@import "./description_content";
+@import "./slider";
+
+.reviews {
+  @include setFlex(column, center, center, rem($reviewsGap));
+  padding: $reviewsPaddingTopBottom 0;
+}

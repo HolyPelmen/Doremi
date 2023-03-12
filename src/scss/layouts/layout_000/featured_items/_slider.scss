@@ -1,0 +1,95 @@
+.featured-carousel {
+  @include setFlex(column, center, flex-start, $featuredSliderThumbnailGap);
+  @include e(slides) {
+    @include m(item) {
+      gap: rem($featuredCardGap);
+
+      &-content .rate {
+        margin-bottom: rem($featuredBottomMarginStars);
+        &::before {
+          @include beforeAfterConstructorSquare(auto) {
+            content: "(205 reviews)";
+            position: relative;
+            @include positioning(null, null, -5px, -1px);
+            @include setTextProperties(
+              quicksand,
+              regular,
+              $featuredCardReviewsSize,
+              lh13
+            );
+            @include getCssVar(color, dark-grey);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include slider(
+  "featured-carousel",
+  $featuredCardWidth,
+  $featuredCardHeight,
+  $featuredNumberOfCards,
+  light-grey
+) {
+  & {
+    align-items: flex-start;
+  }
+  @include m(content) {
+    @include setFlex(column, center, flex-start);
+
+    &::before {
+      @include beforeAfterConstructorRect(100%, $featuredPhotoHeight) {
+        @include getCssVar(background, grey);
+        @include positioning(0, 0);
+        border-radius: $cardBorderRadius;
+      }
+    }
+  }
+
+  @include m(title) {
+    @include setTextProperties(nunito, semibold, $baseCardNameSize, lh32);
+    margin-bottom: $featiredCardTitleBottomMargin;
+  }
+
+  @include m(description) {
+    @include setTextProperties(quicksand, regular, $cardSubnameSize, lh13);
+  }
+
+  @include m(price) {
+    @include setTextProperties(quicksand, regular, $baseFontSize, lh27);
+    margin: $featuredCardReviewsTopMargin 0 $featuredCardReviewsBottomMargin;
+  }
+
+  @include m(divider) {
+    width: 95%;
+    border: $basicBorder solid getInlineCssVar(semilight-grey);
+    @include unsetAll((margin-top, margin-bottom));
+  }
+
+  @include m(owner) {
+    @include unsetAll((font-style));
+    margin-top: rem($featuredTopMarginOwner);
+    @include m(name) {
+      @include setFlex(row, flex-start, center, rem($featuredIconOwnerGap));
+      @include setTextProperties(quicksand, bold, $baseFontSize, lh20);
+      @include unsetAll((margin-top));
+      &:before {
+        @include beforeAfterConstructorSquare(auto, "owner-icon.svg") {
+          position: relative;
+          @include positioning(14%);
+        }
+      }
+    }
+    @include m(address) {
+      @include setFlex(row, flex-start, center, rem($featuredIconOwnerGap + 2px));
+      @include setTextProperties(quicksand, regular, $cardOwnerAddressSize, lh13);
+      &:before {
+        @include beforeAfterConstructorSquare(auto, "owner-geo.svg") {
+          position: relative;
+          @include positioning(null, 1%);
+        }
+      }
+    }
+  }
+}

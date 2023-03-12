@@ -1,0 +1,11 @@
+.footer__social {
+  grid-area: 4 / 2 / 6 / 3;
+  align-self: end;
+  @include m(heading) {
+    margin-bottom: rem($footerSocialsHeaderBotMargin);
+  }
+
+  @include m(links) {
+    margin-bottom: rem($footerSocialsLinksBotMargin);
+  }
+}

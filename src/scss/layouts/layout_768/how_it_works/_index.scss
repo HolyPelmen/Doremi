@@ -1,0 +1,17 @@
+@import "./vars";
+@import "./heading";
+@import "./how_it_works-content";
+@import "./step";
+
+.rental {
+  margin: rem($howItWorksTopMargin) 0 rem($howItWorksBotMargin);
+  padding: 0 rem($howItWorksSidesPadding);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.0242fr 0.172fr 0.5fr 0.5fr;
+  grid-column-gap: rem($howItWorksColGap);
+  grid-row-gap: rem($howItWorksRowGap);
+  min-height: rem($howItWorksMinHeight);
+  place-items: center;
+}

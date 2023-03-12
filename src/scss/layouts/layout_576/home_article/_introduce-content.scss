@@ -1,0 +1,11 @@
+.article-home__title {
+  @include m(article) {
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh49);
+    max-width: unset;
+  }
+
+  @include m(description) {
+    @include setTextProperties(lato, light, $mediumSubheaderSize, lh19);
+    max-width: unset;
+  }
+}

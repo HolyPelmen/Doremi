@@ -1,0 +1,12 @@
+.rental__step {
+  &:nth-of-type(4) {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  @include nthOfTypePseudo(2, after) {
+    @include positioning(70%, 107%);
+  }
+  @include nthOfTypePseudo(3, after) {
+    @include positioning(70%, 107%);
+    transform: rotate(-85deg) scaleX(-1);
+  }
+}

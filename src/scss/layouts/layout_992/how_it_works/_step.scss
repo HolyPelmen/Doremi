@@ -1,0 +1,12 @@
+.rental__step {
+  @include nthOfTypePseudo(2, after) {
+    @include beforeAfterConstructorRect(auto, auto, "arrow.svg");
+    @include positioning(70%, 120%);
+    transform: rotate(-85deg) scaleX(-1);
+  }
+  @include nthOfTypePseudo(3, after) {
+    @include beforeAfterConstructorRect(auto, auto, "arrow.svg");
+    @include positioning(165%, -25%);
+    transform: rotate(40deg);
+  }
+}

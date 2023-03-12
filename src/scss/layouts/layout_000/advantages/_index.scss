@@ -1,0 +1,13 @@
+@import "./vars";
+@import "./heading";
+@import "./sections";
+
+.advantages {
+  @include setFlex(column, center, center, rem($advantagesGaps));
+  padding: rem($topPaddingForAdvantagesArticle) 0 rem($bottomPaddingForAdvantagesArticle);
+  margin: rem($topMarginForAdvantagesArticle) 0 rem($bottomMarginForAdvantagesArticle);
+  background-image: svg("backgrounds/adv-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

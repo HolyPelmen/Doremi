@@ -1,0 +1,16 @@
+@import "./vars";
+@import "./links";
+
+.advertisement {
+  grid-template-rows: 0.62fr 0.35fr 1.2fr 1.5fr;
+  grid-row-gap: rem($adsRowGap);
+  @include e(heading) {
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh82);
+    @include unsetAll((margin));
+    letter-spacing: -0.028em;
+  }
+
+  @include e(description) {
+    @include setTextProperties(quicksand, regular, $bigSubheaderSize, lh32);
+  }
+}

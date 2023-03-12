@@ -1,0 +1,18 @@
+.rental__how-it-works {
+  @include setFlex(column, center, center, rem($distanceBetweenMainArticleChildren));
+  margin-top: calculateNegativeMargin(
+    $distanceBetweenHeaderAndMainArticle,
+    $gapBetweenRentalArticle
+  );
+  text-align: center;
+  @include m(heading) {
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh49);
+    @include resetAllToZero((margin));
+  }
+
+  @include m(text) {
+    @include setTextProperties(lato, regular, $smallSubheaderSize, lh26);
+    @include resetAllToZero((margin));
+    max-width: $maxWidthOfMainDescriptions;
+  }
+}

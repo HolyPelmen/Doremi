@@ -1,0 +1,71 @@
+@import "./vars";
+@import "./logo";
+@import "./social";
+@import "./link-blocks";
+
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.52fr 0.48fr;
+  grid-template-rows: 0.167fr 0.331fr 0.23fr 0.644fr 0.109fr;
+  grid-column-gap: rem($footerColGap);
+  grid-row-gap: rem($footerRowGap);
+  min-height: rem($footerMinHeight + $footerPaddingTop + $footerPaddingBottom);
+  padding: rem($footerPaddingTop) rem($footerPaddingRight) rem($footerPaddingBottom)
+    rem($footerPaddingLeft);
+
+  @include e(description) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  @include e(address) {
+    display: contents;
+    @include m(info) {
+      grid-area: 3 / 1 / 4 / 2;
+      @include m(item) {
+        & > p {
+          margin: unset;
+        }
+      }
+    }
+  }
+
+  @include e(community) {
+    grid-area: 4 / 1 / 5 / 2;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: rem($footerCommunityGap);
+    @include m(heading) {
+      margin: unset;
+    }
+
+    @include m(description) {
+      margin: unset;
+    }
+  }
+
+  @include e(app-stores) {
+    grid-area: 5 / 1 / 6 / 2;
+    @include unsetAll((margin, gap));
+    justify-content: flex-start;
+    gap: rem($footerStoresGap);
+    @include m(item) {
+      & > .footer__store-button > img {
+        max-width: rem($footerStoresMaxWidth);
+      }
+    }
+  }
+
+  @include e(separator) {
+    position: absolute;
+    @include positioning(null, null, rem(2 * $footerCopyrightsGap));
+  }
+
+  @include e(copy) {
+    position: absolute;
+    @include unsetAll((margin, padding));
+    @include positioning(null, null, rem($footerCopyrightsGap));
+    width: 100vw;
+  }
+}

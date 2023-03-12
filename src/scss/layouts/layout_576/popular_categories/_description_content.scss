@@ -1,0 +1,11 @@
+.product-categories__description {
+  @include m(title) {
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh49);
+    max-width: unset;
+  }
+
+  @include m(subtitle) {
+    @include setTextProperties(lato, regular, $smallSubheaderSize, lh26);
+    max-width: unset;
+  }
+}

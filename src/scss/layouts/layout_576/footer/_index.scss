@@ -1,0 +1,5 @@
+.footer {
+  @include e(copy) {
+    @include setTextProperties(lato, light, $footerCopy, lh22);
+  }
+}

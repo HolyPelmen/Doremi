@@ -1,0 +1,18 @@
+@import "./vars";
+@import "./introduce-content";
+@import "./search-bar";
+@import "./searches-categories";
+@import "./popular-searches";
+
+.article-home {
+  background-position: center;
+  padding: rem($articleTopPadding) rem($articleLeftPadding) rem($articleBotPadding)
+    rem($articleRightPadding);
+
+  display: grid;
+  grid-template-columns: minmax(232px, 269px) 170px minmax(232px, 269px);
+  grid-template-rows: 0.3054fr 0.1784fr 0.1676fr 0.3486fr;
+  grid-column-gap: 21px;
+  grid-row-gap: 20px;
+  min-height: rem($homeMinHeight + $articleTopPadding + $articleBotPadding);
+}

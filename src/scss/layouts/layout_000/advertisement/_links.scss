@@ -1,0 +1,8 @@
+.advertisement__stores {
+  @include setFlex(row, center, center, rem($adsGapBetweenButtons));
+  @include m(item) {
+    &:hover {
+      filter: brightness(50%);
+    }
+  }
+}

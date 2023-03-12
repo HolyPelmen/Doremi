@@ -1,0 +1,19 @@
+@import "./links";
+
+.advertisement {
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr 0.49fr;
+  @include e(heading) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  @include e(description) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  @include e(image) {
+    width: auto;
+    align-self: end;
+    grid-area: 1 / 2 / 4 / 3;
+  }
+}

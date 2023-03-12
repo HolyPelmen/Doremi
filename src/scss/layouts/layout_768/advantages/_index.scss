@@ -1,0 +1,8 @@
+@import "./vars";
+@import "./heading";
+
+.advantages {
+  @include unsetAll((margin));
+  padding-top: rem($advantagesTopPadding);
+  padding-bottom: rem($advantagesBotPadding);
+}

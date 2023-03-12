@@ -1,0 +1,11 @@
+.article-home__popular-searches {
+  display: contents;
+  @include m(header) {
+    grid-area: 4 / 1 / 5 / 2;
+    justify-self: end;
+  }
+
+  @include m(cta) {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+}

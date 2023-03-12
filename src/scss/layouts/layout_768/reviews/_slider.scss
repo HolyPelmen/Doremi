@@ -1,0 +1,32 @@
+.reviews-slider {
+  gap: rem($reviewsGap);
+}
+
+@include slider(
+  "reviews-slider",
+  $reviewsCardWidth,
+  $reviewCardHeight,
+  $reviewsCardNumber,
+  white
+) {
+  &:before {
+    @include beforeAfterConstructorSquare(auto, "reviews-profile-photo.svg") {
+      position: absolute;
+      @include positioning(16%, rem($reviewsProfilePhotoLeftPos));
+      z-index: -1;
+    }
+  }
+}
+
+.reviews-slider__slides-item {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.slides-item {
+  @include e(description) {
+    @include getCssVar(font-family, quicksand);
+    margin: unset;
+    letter-spacing: -0.025em;
+  }
+}

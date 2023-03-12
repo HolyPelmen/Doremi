@@ -1,0 +1,9 @@
+@import "./vars";
+@import "./heading";
+@import "./description_content";
+@import "./slider";
+
+.reviews {
+  padding: unset;
+  margin: rem($reviewsTopMargin) 0 rem($reviewsBotMargin);
+}

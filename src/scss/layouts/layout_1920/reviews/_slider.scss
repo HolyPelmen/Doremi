@@ -1,0 +1,5 @@
+.reviews-slider {
+  @include e(slides) {
+    gap: rem($reviewCardsGap);
+  }
+}

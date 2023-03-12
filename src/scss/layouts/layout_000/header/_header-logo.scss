@@ -1,0 +1,23 @@
+.header__logo {
+  @include setFlex(column, flex-start);
+  width: fit-content;
+  margin-left: $headerDistanceBetweenLogoAndText + $headerLogoSize;
+
+  @include m(text) {
+    @include setTextProperties(nunito, extraBold, $headerCompanyNameSize);
+  }
+
+  @include m(subtext) {
+    @include setTextProperties(lato, light, $headerSloganSize);
+  }
+
+  &::before {
+    @include beforeAfterConstructorSquare(rem($headerLogoSize), "logo.svg") {
+      display: flex;
+      @include positioning(
+        rem($headerHamburgerButtonTopPos),
+        rem($headerHamburgerButtonLeftPos)
+      );
+    }
+  }
+}

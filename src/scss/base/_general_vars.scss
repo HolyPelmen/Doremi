@@ -1,0 +1,131 @@
+//fonts
+$google-font: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Nunito:wght@600;700;800&family=Quicksand:wght@300;400;700&display=swap";
+$prefix: doremi- !default;
+$baseFontSize: 16px;
+
+$fontFamilies: (
+  "lato": "Lato, sans-serif",
+  "nunito": "Nunito, sans-serif",
+  "quicksand": "Quicksand, sans-serif",
+);
+
+$weights: (
+  "light": 300,
+  "regular": 400,
+  "semibold": 600,
+  "bold": 700,
+  "extraBold": 800,
+);
+
+$lineHeight: (
+  "lh10": "10px",
+  "lh12": "12px",
+  "lh13": "13px",
+  "lh15": "15px",
+  "lh16": "16px",
+  "lh17": "17px",
+  "lh19": "19px",
+  "lh20": "20px",
+  "lh22": "22px",
+  "lh26": "26px",
+  "lh27": "27px",
+  "lh30": "30px",
+  "lh32": "32px",
+  "lh44": "44px",
+  "lh49": "49px",
+  "lh82": "82px",
+);
+
+$mobilePadding: (12px / $baseFontSize) * 1rem;
+$desktopPadding: 1rem;
+
+// Paths
+
+$imagesPath: "../assets/img/";
+$svgPath: "../assets/svgs/";
+$fontsPath: "../fonts/";
+$usersFilesPath: "../userfiles/";
+
+// Colors
+$colors: (
+  "black": #000000,
+  "white": #ffffff,
+  "grey": #c4c4c4,
+  "semilight-grey": #dddddd,
+  "dark-grey": #777777,
+  "dark-blue": #2b5ae1,
+  "light-grey": #f5f7fa,
+  "blue": #5f8ad4,
+  "0": #4da1f4,
+  "alice-blue": #eef3fa,
+  "purple": #7828e6,
+  "tomato": #e63a28,
+  "light-tomato": "#ff5541",
+  "transparent": "transparent",
+) !default;
+
+$rgba: (
+  "light-blue": "rgba(95, 138, 212, 0.42)",
+  "light-grey": "rgba(34, 34, 34, 0.1)",
+  "50white": "rgba(255, 255, 255, 0.5)",
+  "thumbnail-unselect": "rgba(34, 34, 34, 0.1)",
+  "selected-slide-shadow": "rgba(43, 15, 64, 0.08)",
+);
+
+$paddingsForCards: (
+  "product-slider-right": 22px,
+  "product-slider-left": 22px,
+  "product-slider-top": 24px,
+  "product-slider-bottom": 24px,
+  "featured-carousel-left": 13px,
+  "featured-carousel-right": 13px,
+  "featured-carousel-bottom": 27px,
+  "reviews-slider-top": 27px,
+  "reviews-slider-bottom": 20px,
+  "reviews-slider-right": 20px,
+  "reviews-slider-left": 20px,
+);
+
+$carouselCardPaddingTop: 20px;
+
+// For all screen
+$basicBorder: 1px;
+$widthOfHeadingLines: 37px;
+
+$minHeightForButton: 60px;
+$borderRadiusForButton: 30px;
+
+$thumbnailWidth: 25px;
+$thumbnailHeight: 3px;
+
+$productNumberOfCards: 6;
+$categoriesSliderCardWidth: 250px;
+$categoriesSliderCardHeight: 290px;
+$productCardsTitleSearchesGap: 11px;
+$productCardsBottomPadding: 47px;
+
+$featuredNumberOfCards: 6;
+$featuredPhotoHeight: 250px;
+
+$cardBorderRadius: 10px;
+
+$starWidth: 16.52px;
+$starHeight: 18px;
+
+$reviewsWidth: 81px;
+$reviewHeight: 11px;
+$reviewLeftPos: 3px;
+
+$featuredCardGap: 25px;
+$featuredCardReviewsBottomMargin: 6px;
+$featuredCardReviewsTopMargin: 17px;
+$featiredCardTitleBottomMargin: 5px;
+
+$reviewsCardNumber: 3;
+
+// For 320px screen
+
+$topPositioningForHeadingLines: 50%;
+$sidesPositioningForHeadingLines: -3em;
+$maxWidthOfMainDescriptions: 290px;
+$maxWidthOfSubDescriptions: 220px;

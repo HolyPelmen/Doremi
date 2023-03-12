@@ -1,0 +1,18 @@
+.footer__social {
+  @include m(heading) {
+    @include setTextProperties(quicksand, semibold, $footerSocialsSize, lh30);
+  }
+
+  @include m(links) {
+    @include unsetAll((padding));
+    list-style: none;
+    @include setFlex(row, flex-start, null, rem(8px));
+  }
+
+  @include m(icon) {
+    &:hover {
+      --fill-logo-bg: #e63a28;
+      --fill-logo-lg: #ffffff;
+    }
+  }
+}

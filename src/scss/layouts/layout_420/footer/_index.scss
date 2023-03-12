@@ -1,0 +1,8 @@
+@import "./vars";
+@import "./logo";
+
+.footer {
+  @include e(description) {
+    max-width: $footerDescriptionMaxWidth;
+  }
+}

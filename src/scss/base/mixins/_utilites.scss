@@ -1,0 +1,51 @@
+@function image($file) {
+  @return url($imagesPath + $file);
+}
+
+@function svg($file) {
+  @return url($svgPath + $file);
+}
+
+@function font($file) {
+  @return url($fontsPath + $file);
+}
+
+@function userfile($file) {
+  @return url($usersFilesPath + $file);
+}
+
+@function asset($type, $file) {
+  @if $type == image {
+    @return url($imagesPath + $file);
+  } @else if $type == font {
+    @return url($fontsPath + $file);
+  } @else if $type == userfile {
+    @return url($usersFilesPath + $file);
+  }
+}
+
+@function em($target, $current: $baseFontSize) {
+  @return ($target / $current) * 1em;
+}
+
+@function rem($target) {
+  @return ($target / $baseFontSize) * 1rem;
+}
+
+@function emToPx($em, $font-size) {
+  @return ($em * $font-size);
+}
+
+@function getInlineCssVar($cssVar) {
+  $prefix: if(variable-exists(prefix), #{$prefix}, "");
+  @return var(--#{$prefix}#{$cssVar});
+}
+
+@function calculateNegativeMargin($targetDistance, $currentDistance) {
+  @return ($currentDistance - $targetDistance) * -1;
+}
+
+@function str-ends-with($string, $find) {
+  @return str-length(#{$string}) >= str-length($find) AND
+    str-slice(#{$string}, (str-length(#{$string}) - str-length($find) + 1)) == $find;
+}

@@ -1,0 +1,4 @@
+.footer__logo {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-left: rem($footerLogoSize + $footerLogoDistanceToText);
+}

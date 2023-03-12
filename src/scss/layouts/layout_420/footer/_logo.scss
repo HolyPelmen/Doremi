@@ -1,0 +1,4 @@
+.footer__logo {
+  position: relative;
+  @include unsetAll((margin-left));
+}

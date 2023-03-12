@@ -1,0 +1,14 @@
+.footer__other {
+  grid-area: 1 / 2 / 4 / 3;
+  display: block;
+  @include m(heading) {
+    @include setTextProperties(quicksand, semibold, $bigSubheaderSize, lh30);
+    margin: unset;
+    margin-bottom: rem($footerOtherMarginBot);
+  }
+  @include m(list) {
+    @include setTextProperties(quicksand, regular, $baseFontSize, lh32);
+    @include unsetAll((padding, margin));
+    list-style: none;
+  }
+}

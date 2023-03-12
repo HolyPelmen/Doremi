@@ -1,0 +1,5 @@
+.rental__heading {
+  @include articleStart {
+    @include setTextProperties(quicksand, regular, $baseFontSize, lh15);
+  }
+}

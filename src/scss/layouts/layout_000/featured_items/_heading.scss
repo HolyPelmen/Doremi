@@ -1,0 +1,5 @@
+.featured__heading {
+  @include articleStart {
+    @include setTextProperties(lato, regular, $baseFontSize, lh19);
+  }
+}

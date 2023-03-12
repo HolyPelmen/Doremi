@@ -1,0 +1,18 @@
+@import "./vars";
+@import "./introduce-content";
+@import "./search-bar";
+@import "./searches-categories";
+@import "./popular-searches";
+
+.article-home {
+  background-image: svg("backgrounds/home-bg.svg");
+  background-position: center rem(-25px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: rem($distanceBetweenHeaderAndArticle) 0 rem($articleBottomPadding);
+
+  @include setFlex(column, flex-start, center, rem($maxGapBetweenElements)) {
+    flex-wrap: nowrap;
+    align-content: normal;
+  }
+}

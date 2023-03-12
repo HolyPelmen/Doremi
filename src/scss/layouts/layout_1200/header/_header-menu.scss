@@ -1,0 +1,47 @@
+.header__menu {
+  @include m(label) {
+    display: none;
+  }
+  @include m(toggle) {
+    & ~ .header__menu-list li {
+      @include resetAllToZero((transition));
+      height: auto;
+      width: max-content;
+    }
+  }
+  @include m(list) {
+    position: relative;
+    flex-direction: row;
+    gap: $headerMenuGaps;
+  }
+  @include m(item) {
+    @include getCssVar(color, black);
+    @include unsetAll((background));
+    &:not(:nth-child(4)):not(:nth-child(5))::after {
+      @include beforeAfterConstructorSquare(auto, "open-arrow.svg") {
+        position: relative;
+      }
+    }
+    &:not(:nth-child(4)):not(:nth-child(5)) > span {
+      margin-right: rem($headerSpanRightMargin);
+    }
+
+    &:nth-child(4)::before {
+      @include beforeAfterConstructorSquare(auto, "header-menu-login-icon.svg") {
+        position: relative;
+        @include positioning();
+      }
+    }
+    &:nth-child(4) > span {
+      margin-left: rem($headerBeforeLeftPos);
+    }
+
+    @include m(button) {
+      @include baseButton {
+        @include getCssVar(background-color, dark-blue);
+        @include setTextProperties(quicksand, bold, $bigButtonSize, lh22);
+        align-items: center;
+      }
+    }
+  }
+}

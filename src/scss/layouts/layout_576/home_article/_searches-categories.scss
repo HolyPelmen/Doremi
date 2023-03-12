@@ -1,0 +1,12 @@
+.article-home__list {
+  @include setFlex(row, center, center, rem($categoriesGaps));
+  @include m(item) {
+    & > * > svg {
+      width: $articleButtonSizes;
+      height: $articleButtonSizes;
+    }
+    &:hover::before {
+      @include positioning(105%, -30%);
+    }
+  }
+}

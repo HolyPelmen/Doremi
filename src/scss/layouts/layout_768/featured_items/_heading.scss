@@ -1,0 +1,3 @@
+.featured__heading {
+  @include getCssVar(font-weight, light);
+}

@@ -1,0 +1,63 @@
+// @include slider(
+//   "product-slider",
+//   $categoriesSliderCardWidth,
+//   $categoriesSliderCardHeight,
+//   $productNumberOfCards,
+//   white
+// ) {
+//   @include nthOfTypePseudo(1, before) {
+//     @include beforeAfterConstructorSquare(auto, "electronics.svg");
+//     @include positioning(22%, 31%);
+//   }
+
+//   @include nthOfTypePseudo(2, before) {
+//     @include beforeAfterConstructorSquare(auto, "bike.svg");
+//     @include positioning(25%, 25%);
+//   }
+
+//   @include nthOfTypePseudo(3, before) {
+//     @include beforeAfterConstructorSquare(auto, "clothes.svg");
+//     @include positioning(15%, 33%);
+//   }
+
+//   @include nthOfTypePseudo(4, before) {
+//     @include beforeAfterConstructorSquare(auto, "camera.svg");
+//     @include positioning(22%, 31%);
+//   }
+
+//   @include nthOfTypePseudo(5, before) {
+//     @include beforeAfterConstructorSquare(auto, "drones.svg");
+//     @include positioning(22%, 31%);
+//   }
+
+//   @include nthOfTypePseudo(6, before) {
+//     @include beforeAfterConstructorSquare(auto, "properties.svg");
+//     @include positioning(22%, 31%);
+//   }
+
+//   @include m(title) {
+//     @include setTextProperties(nunito, semibold, $baseCardNameSize, lh32);
+//   }
+
+//   @include m(searches) {
+//     @include setTextProperties(quicksand, regular, $baseFontSize, lh15);
+//   }
+// } ;
+@include unsetSlider("product-slider", $productNumberOfCards);
+
+.product-slider {
+  @include e(radio) {
+    display: none;
+  }
+  @include e(thumbnails) {
+    display: none;
+  }
+
+  @include e(slides) {
+    padding: unset;
+    @include setFlex(row, center, center, $categoriesCardGap);
+    @include m(item) {
+      transform: scale(1);
+    }
+  }
+}

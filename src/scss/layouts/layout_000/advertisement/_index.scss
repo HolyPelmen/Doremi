@@ -1,0 +1,26 @@
+@import "./vars";
+@import "./links";
+
+.advertisement {
+  background: svg("backgrounds/ads-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom 0px right 58%;
+  padding: rem($adsTopBottomPadding) rem($adsSidesPadding);
+  @include e(heading) {
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh49);
+    @include getCssVar(color, white);
+  }
+
+  @include e(description) {
+    @include setTextProperties(lato, regular, $bigSubheaderSize, lh32);
+    @include getCssVar(color, white);
+    @include unsetAll((margin));
+  }
+
+  @include e(image) {
+    position: relative;
+    @include positioning(rem(-16px), rem($adsSidesPadding * -1));
+    width: 100vw;
+  }
+}

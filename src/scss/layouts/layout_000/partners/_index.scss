@@ -1,0 +1,8 @@
+@import "./vars";
+@import "./heading";
+@import "./partners_list";
+
+.partners {
+  @include setFlex(column, center, null, rem($partnersGap));
+  padding-bottom: rem($partnersBottomPadding);
+}

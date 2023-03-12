@@ -1,0 +1,20 @@
+.product-categories__description {
+  margin-top: calculateNegativeMargin(
+    $categoriesDistanceBetweenTitleAndHeader,
+    $categoriesGap
+  );
+  @include setFlex(column, center, center, rem($categoriesDistanceHeaderAndDescription));
+  @include m(title) {
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh49);
+    @include resetAllToZero((margin));
+    max-width: rem($categoriesHeadingWidth);
+    text-align: center;
+  }
+
+  @include m(subtitle) {
+    @include resetAllToZero((margin));
+    @include setTextProperties(lato, regular, $smallSubheaderSize, lh26);
+    max-width: rem($maxWidthOfMainDescriptions);
+    text-align: center;
+  }
+}

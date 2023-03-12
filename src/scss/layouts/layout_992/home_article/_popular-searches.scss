@@ -1,0 +1,9 @@
+.article-home__popular-searches {
+  @include m(header) {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  @include m(cta) {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+}

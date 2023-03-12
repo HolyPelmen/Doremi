@@ -1,0 +1,18 @@
+.header__menu {
+  @include m(list) {
+    @include positioning(12%, 0);
+  }
+
+  @include m(label) {
+    height: ($headerHamburgerButtonHeight * 3) + ($headerHamburgerButtonMargins * 2);
+  }
+
+  @include m(button) {
+    &::after {
+      margin-top: rem($headerHamburgerButtonMargins);
+    }
+    &::before {
+      margin-top: rem(-$headerHamburgerButtonMargins);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.featured__content {
+  @include setFlex(column, center, center);
+  margin-top: rem(
+    calculateNegativeMargin($featuredHeaderContentGap, $featuredContentCardGap)
+  );
+  @include m(title) {
+    @include unsetAll((margin-top));
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh49);
+  }
+
+  @include m(subtext) {
+    @include unsetAll((margin));
+    @include setTextProperties(lato, regular, $smallSubheaderSize, lh26);
+    text-align: center;
+  }
+}

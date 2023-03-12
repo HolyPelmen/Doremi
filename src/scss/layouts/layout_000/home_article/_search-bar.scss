@@ -1,0 +1,34 @@
+.article-home__search {
+  @include setFlex(row, flex-start, center);
+  width: $widthForSearchBar;
+  min-height: rem($minHeightForSearchBar);
+  border-radius: rem($borderRadiusForSearchBar);
+  background-color: white;
+  border: rem($basicBorder) solid getInlineCssVar(light-grey);
+  padding: 0 rem($searchFormPaddingSides);
+  outline: rem(4px) solid getInlineCssVar("50white");
+  position: relative;
+
+  @include m(input) {
+    flex: 1;
+    height: 100%;
+    font-size: rem($baseFontSize);
+    padding: rem($paddingsForSearchBarTopBottom) rem($paddingsForSearchBarSides);
+    @include unsetAll((border, outline));
+  }
+
+  @include m(button) {
+    @include baseButton {
+      @include setTextProperties(quicksand, bold, $baseFontSize, lh16);
+      @include setFlex(row, center, center);
+      margin-top: rem(
+        calculateNegativeMargin($searchButtonTopMargin, $maxGapBetweenElements)
+      );
+      min-width: rem($minWidthForSearchButton);
+    }
+  }
+
+  &::before {
+    @include beforeAfterConstructorRect(rem($sizeOfSearchIcon), auto, "search-icon.svg");
+  }
+}

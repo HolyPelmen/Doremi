@@ -1,0 +1,5 @@
+.partners__heading {
+  @include unsetAll((margin));
+  @include setTextProperties(nunito, bold, $smallHeaderSize, lh32);
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+.header__logo {
+  margin-left: $headerDistanceBetweenLogoAndText + $headerLogoSize;
+  &::before {
+    @include positioning(rem($headerTopPos), rem($headerLeftPos));
+  }
+}

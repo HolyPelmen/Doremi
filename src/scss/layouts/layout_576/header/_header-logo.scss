@@ -1,0 +1,19 @@
+.header__logo {
+  margin-left: $headerDistanceBetweenLogoAndText + $headerLogoSize;
+  @include m(text) {
+    @include setTextProperties(nunito, extraBold, $headerCompanyNameSize, lh49);
+  }
+
+  @include m(subtext) {
+    @include setTextProperties(lato, light, $headerSloganSize, lh17);
+  }
+
+  &::before {
+    @include beforeAfterConstructorSquare(rem($headerLogoSize), "logo.svg") {
+      @include positioning(
+        rem($headerHamburgerButtonTopPos),
+        rem($headerHamburgerButtonLeftPos)
+      );
+    }
+  }
+}

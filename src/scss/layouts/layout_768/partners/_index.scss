@@ -1,0 +1,8 @@
+@import "./vars";
+@import "./partners_list";
+
+.partners {
+  gap: rem($partnersGap);
+  padding: 0 rem($partnersSidesPadding);
+  margin-bottom: rem($partnersBotMargin);
+}

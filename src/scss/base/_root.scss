@@ -1,0 +1,27 @@
+:root {
+  @include setCssVar(font-size, $baseFontSize);
+
+  @each $name, $value in $fontFamilies {
+    @include setCssVar($name, $value);
+  }
+
+  @each $name, $value in $weights {
+    @include setCssVar($name, $value);
+  }
+
+  @each $color, $value in $colors {
+    @include setCssVar($color, $value);
+  }
+
+  @each $color, $value in $rgba {
+    @include setCssVar($color, $value);
+  }
+
+  @each $name, $value in $lineHeight {
+    @include setCssVar($name, $value);
+  }
+
+  @each $name, $value in $paddingsForCards {
+    @include setCssVar($name, $value);
+  }
+}

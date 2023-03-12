@@ -1,0 +1,11 @@
+.reviews__content {
+  @include m(heading) {
+    @include getCssVar(line-height, lh82);
+    margin-bottom: rem($reviewsContentGap);
+  }
+
+  @include m(description) {
+    @include getCssVar(font-family, quicksand);
+    margin-top: rem($reviewsContentGap);
+  }
+}

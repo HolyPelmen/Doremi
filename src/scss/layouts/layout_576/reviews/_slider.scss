@@ -1,0 +1,5 @@
+.slides-item {
+  @include e(description) {
+    @include setTextProperties(lato, regular, $cardDesctiptionSize, lh26);
+  }
+}

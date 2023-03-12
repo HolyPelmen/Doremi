@@ -1,0 +1,9 @@
+.advertisement__stores {
+  align-self: end;
+
+  @include m(item) {
+    & > img {
+      max-width: rem($adsMaxWidthStores);
+    }
+  }
+}

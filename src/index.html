@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Doremi</title>
+  </head>
+  <body>
+    <!-- This is the header section of the website -->
+    <header class="header" id="header">
+      <!-- Logo section -->
+      <div class="header__logo">
+        <!-- Logo text -->
+        <span class="header__logo-text">Doremi</span>
+        <!-- Logo subtext -->
+        <span class="header__logo-subtext">Buy, Sell Or Rent</span>
+      </div>
+      <!-- Menu section -->
+      <div class="header__menu">
+        <!-- Hamburger menu -->
+        <input
+          id="menu-toggle"
+          class="header__menu-toggle"
+          type="checkbox"
+          aria-label="Menu toggle button"
+        />
+        <label
+          for="menu-toggle"
+          class="header__menu-label"
+          aria-label="Menu toggle label"
+        >
+          <div class="header__menu-button" aria-hidden="true"></div>
+        </label>
+        <!-- Menu list element -->
+        <ul class="header__menu-list" id="headerMenu">
+          <!-- Menu items -->
+          <li class="header__menu-item"><span>Explore</span></li>
+          <li class="header__menu-item"><span>About us</span></li>
+          <li class="header__menu-item"><span>Pages</span></li>
+          <li class="header__menu-item"><span>Sign up or Register</span></li>
+          <li class="header__menu-item">
+            <button class="header__menu-item-button">+ List An Item</button>
+          </li>
+          <li class="header__menu-item"><span>Language</span></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Article section for the homepage -->
+      <article class="article-home" id="homeArticle">
+        <!-- Title section for the article -->
+        <div class="article-home__title">
+          <h1 class="article-home__title-article">Get Anything On Rent</h1>
+          <p class="article-home__title-description">
+            Find Thousands of Items (Almost Anything) For Rent
+          </p>
+        </div>
+        <!-- Search section for the article -->
+        <div class="article-home__search">
+          <input
+            type="text"
+            placeholder=""
+            name="search"
+            id="search-bar"
+            class="article-home__search-input"
+          />
+        </div>
+        <!-- Search button for the article -->
+        <button type="submit" class="article-home__search-button">Search</button>
+        <!-- Popular searching section for the article -->
+        <ul class="article-home__list">
+          <li class="article-home__list-item">
+            <button class="article-home__list-button">
+              <svg
+                width="39"
+                height="40"
+                viewBox="0 0 39 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="20" cy="20" r="19.083" fill="white" />
+                <path
+                  d="M23.3766 12.6723V10.8403H14.7893V12.6723H12.2131V29.1599H17.3655V27.3279H20.8004V29.1599H25.9528V12.6723H23.3766ZM18.2242 24.58H16.5068V22.748H18.2242V24.58ZM18.2242 20.9161H16.5068V19.0841H18.2242V20.9161ZM18.2242 17.2522H16.5068V15.4202H18.2242V17.2522ZM21.6591 24.58H19.9417V22.748H21.6591V24.58ZM21.6591 20.9161H19.9417V19.0841H21.6591V20.9161ZM21.6591 17.2522H19.9417V15.4202H21.6591V17.2522Z"
+                  fill="#7828E6"
+                />
+              </svg>
+            </button>
+          </li>
+          <li class="article-home__list-item">
+            <button class="article-home__list-button">
+              <svg
+                width="39"
+                height="40"
+                viewBox="0 0 39 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="20" cy="20" r="19.083" fill="white" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M29.0456 17.0157C28.9487 16.8729 28.8029 16.7897 28.651 16.7897H26.7183C26.2419 15.289 25.6214 13.8151 24.9168 13.2594C22.4758 11.3374 15.9967 11.3374 13.5557 13.2594C12.8504 13.8151 12.2306 15.289 11.7512 16.7897H9.82078C9.66735 16.7897 9.52309 16.8729 9.42615 17.0157C9.3292 17.1576 9.29257 17.3416 9.32233 17.5233L9.6101 19.1781C9.65667 19.4598 9.86505 19.6613 10.1063 19.6613H10.6787C10.1261 20.4239 9.85742 21.3849 9.85513 22.3428C9.85055 23.5298 10.2276 24.6007 10.9177 25.3602C10.9253 25.3663 10.9329 25.3755 10.9398 25.3808V27.7005C10.9398 28.2013 11.2802 28.6112 11.7016 28.6112H13.4832C13.903 28.6112 14.2449 28.2013 14.2449 27.7005V26.7685H24.2268V27.7005C24.2268 28.2013 24.5672 28.6112 24.9893 28.6112H26.7702C27.19 28.6112 27.5327 28.2013 27.5327 27.7005V25.4251C28.2617 24.6274 28.6113 23.5267 28.6166 22.426C28.6197 21.436 28.3388 20.4391 27.7525 19.6613H28.3632C28.6044 19.6613 28.812 19.4598 28.8616 19.1781L29.1479 17.5233C29.1769 17.3416 29.1402 17.1576 29.0456 17.0157ZM14.3938 14.7814C16.3387 13.251 22.133 13.251 24.0757 14.7814C24.4558 15.0784 24.9413 16.2768 25.3863 17.7454H13.0839C13.5282 16.2768 14.0137 15.0784 14.3938 14.7814ZM13.6122 24.3664C12.7863 24.3664 12.1138 23.5626 12.1138 22.5718C12.1138 21.5833 12.7863 20.7803 13.6122 20.7803C14.4411 20.7803 15.1136 21.5833 15.1136 22.5718C15.1136 23.5626 14.4411 24.3664 13.6122 24.3664ZM24.8771 24.3664C24.0512 24.3664 23.3788 23.5626 23.3788 22.5718C23.3788 21.5833 24.0512 20.7803 24.8771 20.7803C25.7061 20.7803 26.3786 21.5833 26.3786 22.5718C26.3786 23.5626 25.7061 24.3664 24.8771 24.3664Z"
+                  fill="#7828E6"
+                />
+              </svg>
+            </button>
+          </li>
+          <li class="article-home__list-item">
+            <button class="article-home__list-button">
+              <svg
+                width="39"
+                height="40"
+                viewBox="0 0 39 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="20" cy="20" r="19.083" fill="white" />
+                <path
+                  d="M22.7941 20.286C23.0408 20.286 23.2414 20.0595 23.2414 19.7812C23.2414 19.5029 23.0408 19.2764 22.7941 19.2764C22.5475 19.2764 22.3469 19.5029 22.3469 19.7812C22.3469 20.0595 22.5475 20.286 22.7941 20.286Z"
+                  fill="#7828E6"
+                />
+                <path
+                  d="M17.0395 20.286C17.2861 20.286 17.4868 20.0596 17.4868 19.7812C17.4868 19.5029 17.2861 19.2764 17.0395 19.2764C16.7929 19.2764 16.5923 19.5029 16.5923 19.7812C16.5923 20.0596 16.7929 20.286 17.0395 20.286Z"
+                  fill="#7828E6"
+                />
+                <path
+                  d="M27.5472 27.8355L26.4434 16.6963C26.4181 16.4408 26.2267 16.2476 25.9989 16.2476H23.2414V18.3537C23.762 18.5621 24.1359 19.1232 24.1359 19.7812C24.1359 20.6162 23.534 21.2956 22.7941 21.2956C22.0543 21.2956 21.4524 20.6162 21.4524 19.7812C21.4524 19.1231 21.8263 18.5621 22.3469 18.3537V16.2476H17.4868V18.3537C18.0073 18.5621 18.3813 19.1232 18.3813 19.7812C18.3813 20.6162 17.7793 21.2956 17.0395 21.2956C16.2997 21.2956 15.6977 20.6162 15.6977 19.7812C15.6977 19.1231 16.0717 18.5621 16.5922 18.3537V16.2476H13.8333C13.6055 16.2476 13.414 16.4409 13.3888 16.6964L12.2865 27.8356C12.2723 27.9783 12.3128 28.1211 12.3976 28.2281C12.4825 28.3352 12.6037 28.3964 12.731 28.3964H27.1027C27.23 28.3964 27.3513 28.3352 27.4361 28.2281C27.521 28.1211 27.5613 27.9782 27.5472 27.8355Z"
+                  fill="#7828E6"
+                />
+                <path
+                  d="M17.4868 15.3558C17.4868 13.8435 18.5769 12.6131 19.9169 12.6131C21.2568 12.6131 22.3469 13.8435 22.3469 15.3558V16.2476H23.2414V15.3558C23.2414 13.2868 21.75 11.6035 19.9169 11.6035C18.0837 11.6035 16.5923 13.2868 16.5923 15.3558L16.5922 16.2476H17.4868L17.4868 15.3558Z"
+                  fill="#7828E6"
+                />
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <!-- Popular searches section for the article -->
+        <div class="article-home__popular-searches">
+          <p class="article-home__popular-searches-header">Popular Searches</p>
+          <!-- Popular searches CTA (call-to-action) -->
+          <p class="article-home__popular-searches-cta">
+            Or
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="article-home__popular-searches-cta-link"
+              >List An Item For Rent</a
+            >
+          </p>
+        </div>
+      </article>
+      <article class="rental">
+        <!-- The main heading for the rental section -->
+        <span class="rental__heading">Rent Things The Easier Way</span>
+        <section class="rental__how-it-works">
+          <!-- The heading for the "How it Works" section -->
+          <h2 class="rental__how-it-works-heading">How It Works</h2>
+          <p class="rental__how-it-works-text">
+            <!-- Description text for the "How it Works" section -->
+            Eiusmod temporl incididunt utys labore dolore magna aliqua sed enim aud lorem
+            ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </section>
+        <section class="rental__step">
+          <!-- The heading and text for the "Find Your Perfect Item" step -->
+          <h3 class="rental__step-heading">Find Your Perfect Item</h3>
+          <p class="rental__step-text">
+            Eiusmod tempora incididunt dolore magna aliqua sed enim lorem ipsum sit amet
+            consectetur.
+          </p>
+        </section>
+        <section class="rental__step">
+          <!-- The heading and text for the "Book Item With Seller" step -->
+          <h3 class="rental__step-heading">Book Item With Seller</h3>
+          <p class="rental__step-text">
+            Eiusmod tempora incididunt dolore magna aliqua sed enim lorem ipsum sit amet
+            consectetur.
+          </p>
+        </section>
+        <section class="rental__step">
+          <!-- The heading and text for the "Play And Return Item" step -->
+          <h3 class="rental__step-heading">Play And Return Item</h3>
+          <p class="rental__step-text">
+            Eiusmod tempora incididunt dolore magna aliqua sed enim lorem ipsum sit amet
+            consectetur.
+          </p>
+        </section>
+      </article>
+      <article class="product-categories">
+        <span class="product-categories__title">Rent Things The Easier Way</span>
+        <div class="product-categories__description">
+          <h2 class="product-categories__description-title">Popular Categories</h2>
+          <p class="product-categories__description-subtitle">
+            Eiusmod temporl incididunt utys labore dolore magna aliqua sed enim aud lorem
+            ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <section class="product-slider">
+          <!-- radio buttons for navigation -->
+          <input
+            type="radio"
+            name="slide-nav"
+            id="product-slider-1"
+            class="product-slider__radio"
+          />
+          <input
+            type="radio"
+            name="slide-nav"
+            id="product-slider-2"
+            class="product-slider__radio"
+          />
+          <input
+            type="radio"
+            name="slide-nav"
+            id="product-slider-3"
+            class="product-slider__radio"
+          />
+          <input
+            type="radio"
+            name="slide-nav"
+            id="product-slider-4"
+            class="product-slider__radio"
+            checked
+          />
+          <input
+            type="radio"
+            name="slide-nav"
+            id="product-slider-5"
+            class="product-slider__radio"
+          />
+          <input
+            type="radio"
+            name="slide-nav"
+            id="product-slider-6"
+            class="product-slider__radio"
+          />
+
+          <!-- list of slides with labels for radio button navigation -->
+          <ul class="product-slider__slides">
+            <label for="product-slider-1" class="product-slider__slides-item">
+              <p class="product-slider__slides-item-title">Electronic Items</p>
+              <span class="product-slider__slides-item-searches">508 Searches</span>
+            </label>
+            <label for="product-slider-2" class="product-slider__slides-item">
+              <p class="product-slider__slides-item-title">Cars Or Bikes</p>
+              <span class="product-slider__slides-item-searches">2k Searches</span>
+            </label>
+            <label for="product-slider-3" class="product-slider__slides-item">
+              <p class="product-slider__slides-item-title">New Clothes</p>
+              <span class="product-slider__slides-item-searches">74 Searches</span>
+            </label>
+            <label for="product-slider-4" class="product-slider__slides-item">
+              <p class="product-slider__slides-item-title">DSLR Cameras</p>
+              <span class="product-slider__slides-item-searches">158 Searches</span>
+            </label>
+            <label for="product-slider-5" class="product-slider__slides-item">
+              <p class="product-slider__slides-item-title">Drones</p>
+              <span class="product-slider__slides-item-searches">120 Searches</span>
+            </label>
+            <label for="product-slider-6" class="product-slider__slides-item">
+              <p class="product-slider__slides-item-title">Properties</p>
+              <span class="product-slider__slides-item-searches">68 Searches</span>
+            </label>
+          </ul>
+
+          <!-- list of thumbnail labels for radio button navigation -->
+
+          <ul class="product-slider__thumbnails">
+            <label for="product-slider-1" class="product-slider__thumbnails-item"></label>
+            <label for="product-slider-2" class="product-slider__thumbnails-item"></label>
+            <label for="product-slider-3" class="product-slider__thumbnails-item"></label>
+            <label for="product-slider-4" class="product-slider__thumbnails-item"></label>
+            <label for="product-slider-5" class="product-slider__thumbnails-item"></label>
+            <label for="product-slider-6" class="product-slider__thumbnails-item"></label>
+          </ul>
+        </section>
+      </article>
+      <article class="featured">
+        <span class="featured__heading">Rent Things The Easier Way</span>
+        <div class="featured__content">
+          <h2 class="featured__content-title">Featured Items</h2>
+          <p class="featured__content-subtext">
+            Eiusmod temporl incididunt utys labore dolore magna aliqua sed enim aud lorem
+            ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <section class="featured-carousel">
+          <input
+            type="radio"
+            name="featured-carousel-nav"
+            id="featured-carousel-1"
+            class="featured-carousel__radio"
+          />
+          <input
+            type="radio"
+            name="featured-carousel-nav"
+            id="featured-carousel-2"
+            class="featured-carousel__radio"
+            checked
+          />
+          <input
+            type="radio"
+            name="featured-carousel-nav"
+            id="featured-carousel-3"
+            class="featured-carousel__radio"
+          />
+          <input
+            type="radio"
+            name="featured-carousel-nav"
+            id="featured-carousel-4"
+            class="featured-carousel__radio"
+          />
+          <input
+            type="radio"
+            name="featured-carousel-nav"
+            id="featured-carousel-5"
+            class="featured-carousel__radio"
+          />
+          <input
+            type="radio"
+            name="featured-carousel-nav"
+            id="featured-carousel-6"
+            class="featured-carousel__radio"
+          />
+
+          <ul class="featured-carousel__slides">
+            <label for="featured-carousel-1" class="featured-carousel__slides-item">
+              <div class="featured-carousel__slides-item-content">
+                <h4 class="featured-carousel__slides-item-title">Canon 3D - MK III</h4>
+                <span class="featured-carousel__slides-item-description">
+                  Best DSLR Camera available that...
+                </span>
+                <p class="featured-carousel__slides-item-price">
+                  Rent For <span class="tomato bold">$45/Day</span>
+                </p>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star5"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="featured-star5" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star4"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="featured-star4" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star3"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="featured-star3" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star2"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="featured-star2" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star1"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="featured-star1" title="text"></label>
+                </div>
+              </div>
+              <hr class="featured-carousel__slides-item-divider" />
+              <address class="featured-carousel__slides-item-owner">
+                <p class="featured-carousel__slides-item-owner-name">Daniel Thomson</p>
+                <p class="featured-carousel__slides-item-owner-address">
+                  32 Simple Rd, NY 020103
+                </p>
+              </address>
+            </label>
+            <label for="featured-carousel-2" class="featured-carousel__slides-item"
+              ><div class="featured-carousel__slides-item-content">
+                <h4 class="featured-carousel__slides-item-title">Inspired Drone 2020</h4>
+                <span class="featured-carousel__slides-item-description">
+                  This drone takes your everything that...
+                </span>
+                <p class="featured-carousel__slides-item-price">
+                  Rent For <span class="tomato bold">$45/Day</span>
+                </p>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star10"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="featured-star10" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star9"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="featured-star9" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star8"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="featured-star8" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star7"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="featured-star7" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star6"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="featured-star6" title="text"></label>
+                </div>
+              </div>
+              <hr class="featured-carousel__slides-item-divider" />
+              <address class="featured-carousel__slides-item-owner">
+                <p class="featured-carousel__slides-item-owner-name">Daniel Thomson</p>
+                <p class="featured-carousel__slides-item-owner-address">
+                  32 Simple Rd, NY 020103
+                </p>
+              </address></label
+            >
+            <label for="featured-carousel-3" class="featured-carousel__slides-item"
+              ><div class="featured-carousel__slides-item-content">
+                <h4 class="featured-carousel__slides-item-title">Audi A8 Model 2021</h4>
+                <span class="featured-carousel__slides-item-description">
+                  Stylish & comfortable Audi sports car...
+                </span>
+                <p class="featured-carousel__slides-item-price">
+                  Rent For <span class="tomato bold">$45/Day</span>
+                </p>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star15"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="featured-star15" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star14"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="featured-star14" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star13"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="featured-star13" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star12"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="featured-star12" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star11"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="featured-star11" title="text"></label>
+                </div>
+              </div>
+              <hr class="featured-carousel__slides-item-divider" />
+              <address class="featured-carousel__slides-item-owner">
+                <p class="featured-carousel__slides-item-owner-name">Daniel Thomson</p>
+                <p class="featured-carousel__slides-item-owner-address">
+                  32 Simple Rd, NY 020103
+                </p>
+              </address></label
+            >
+            <label for="featured-carousel-4" class="featured-carousel__slides-item"
+              ><div class="featured-carousel__slides-item-content">
+                <h4 class="featured-carousel__slides-item-title">MacBook Pro 2020</h4>
+                <span class="featured-carousel__slides-item-description">
+                  Apple Macbook 17inch, i9 Intel chip...
+                </span>
+                <p class="featured-carousel__slides-item-price">
+                  Rent For <span class="tomato bold">$45/Day</span>
+                </p>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star20"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="featured-star20" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star19"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="featured-star19" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star18"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="featured-star18" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star17"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="featured-star17" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star16"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="featured-star16" title="text"></label>
+                </div>
+              </div>
+              <hr class="featured-carousel__slides-item-divider" />
+              <address class="featured-carousel__slides-item-owner">
+                <p class="featured-carousel__slides-item-owner-name">Daniel Thomson</p>
+                <p class="featured-carousel__slides-item-owner-address">
+                  32 Simple Rd, NY 020103
+                </p>
+              </address></label
+            >
+            <label for="featured-carousel-5" class="featured-carousel__slides-item"
+              ><div class="featured-carousel__slides-item-content">
+                <h4 class="featured-carousel__slides-item-title">Instant Stove</h4>
+                <span class="featured-carousel__slides-item-description">
+                  Happy cooking with 6L pressure cooker...
+                </span>
+                <p class="featured-carousel__slides-item-price">
+                  Rent For <span class="tomato bold">$45/Day</span>
+                </p>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star25"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="featured-star25" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star24"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="featured-star24" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star23"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="featured-star23" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star22"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="featured-star22" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star21"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="featured-star21" title="text"></label>
+                </div>
+              </div>
+              <hr class="featured-carousel__slides-item-divider" />
+              <address class="featured-carousel__slides-item-owner">
+                <p class="featured-carousel__slides-item-owner-name">Daniel Thomson</p>
+                <p class="featured-carousel__slides-item-owner-address">
+                  32 Simple Rd, NY 020103
+                </p>
+              </address></label
+            >
+            <label for="featured-carousel-6" class="featured-carousel__slides-item"
+              ><div class="featured-carousel__slides-item-content">
+                <h4 class="featured-carousel__slides-item-title">Outwell Double Tent</h4>
+                <span class="featured-carousel__slides-item-description">
+                  Large Tent has 2 bedrooms big enough...
+                </span>
+                <p class="featured-carousel__slides-item-price">
+                  Rent For <span class="tomato">$45/Day</span>
+                </p>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star30"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="featured-star30" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star29"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="featured-star29" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star28"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="featured-star28" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star27"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="featured-star27" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="featured-star26"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="featured-star26" title="text"></label>
+                </div>
+              </div>
+              <hr class="featured-carousel__slides-item-divider" />
+              <address class="featured-carousel__slides-item-owner">
+                <p class="featured-carousel__slides-item-owner-name">Daniel Thomson</p>
+                <p class="featured-carousel__slides-item-owner-address">
+                  32 Simple Rd, NY 020103
+                </p>
+              </address></label
+            >
+          </ul>
+
+          <ul class="featured-carousel__thumbnails">
+            <label
+              for="featured-carousel-1"
+              class="featured-carousel__thumbnails-item"
+            ></label>
+            <label
+              for="featured-carousel-2"
+              class="featured-carousel__thumbnails-item"
+            ></label>
+            <label
+              for="featured-carousel-3"
+              class="featured-carousel__thumbnails-item"
+            ></label>
+            <label
+              for="featured-carousel-4"
+              class="featured-carousel__thumbnails-item"
+            ></label>
+            <label
+              for="featured-carousel-5"
+              class="featured-carousel__thumbnails-item"
+            ></label>
+            <label
+              for="featured-carousel-6"
+              class="featured-carousel__thumbnails-item"
+            ></label>
+          </ul>
+        </section>
+        <button class="featured__cta">Start your search</button>
+      </article>
+      <article class="advantages">
+        <h2 class="advantages__title">
+          Get Anything On Rent With Doremi's Rental Service
+        </h2>
+        <section class="advantages__section">
+          <h3 class="advantages__section-subtitle">Easier to buy, sell or rent</h3>
+          <p class="advantages__section-description">
+            Eiusmod tempora incididunt dolore magna aliqua enim lorem ipsum sit amet
+            consectetur.
+          </p>
+        </section>
+        <section class="advantages__section">
+          <h3 class="advantages__section-subtitle">Easier to buy, sell or rent</h3>
+          <p class="advantages__section-description">
+            Eiusmod tempora incididunt dolore magna aliqua enim lorem ipsum sit amet
+            consectetur.
+          </p>
+        </section>
+        <section class="advantages__section">
+          <h3 class="advantages__section-subtitle">Easier to buy, sell or rent</h3>
+          <p class="advantages__section-description">
+            Eiusmod tempora incididunt dolore magna aliqua enim lorem ipsum sit amet
+            consectetur.
+          </p>
+        </section>
+      </article>
+      <article class="advertisement">
+        <h2 class="advertisement__heading">
+          Access Everything On The Go With Doremi App
+        </h2>
+        <p class="advertisement__description">
+          By using our app it&apos;s all fun to discover some great stuff for your buy,
+          rent or sell purpose in low price.
+        </p>
+        <img
+          src="./assets/img/adsPhones320.png"
+          alt=""
+          srcset="
+            ./assets/img/adsPhones320.png   320w,
+            ./assets/img/adsPhones768.png   768w,
+            ./assets/img/adsPhones1920.png 1200w
+          "
+          sizes="(max-width: 566px) 320px,
+         (min-width: 567px) and (max-width: 1199px) 768px,
+         (min-width: 1200px) 1200px"
+          class="advertisement__image"
+        />
+        <div class="advertisement__stores">
+          <button class="advertisement__stores-item">
+            <img
+              src=""
+              alt=""
+              srcset="
+                ./assets/img/play-store-small.png 420w,
+                ./assets/img/play-store-big.png   768w
+              "
+            />
+          </button>
+          <button class="advertisement__stores-item">
+            <img
+              src=""
+              alt=""
+              srcset="
+                ./assets/img/apple-store-small.png 420w,
+                ./assets/img/apple-store-big.png   768w
+              "
+            />
+          </button>
+        </div>
+      </article>
+      <article class="reviews">
+        <span class="reviews__title">Read The User's Testimonials</span>
+        <div class="reviews__content">
+          <h2 class="reviews__content-heading">What People Saying</h2>
+          <p class="reviews__content-description">
+            Eiusmod tempor dui incididunt utes labore dolore magna ipsum aliqua sed enim
+            aud lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <section class="reviews-slider">
+          <input
+            type="radio"
+            class="reviews-slider__radio"
+            name="reviews-slider-nav"
+            id="reviews-slider-1"
+            checked
+          />
+          <input
+            type="radio"
+            class="reviews-slider__radio"
+            name="reviews-slider-nav"
+            id="reviews-slider-2"
+          />
+          <input
+            type="radio"
+            class="reviews-slider__radio"
+            name="reviews-slider-nav"
+            id="reviews-slider-3"
+          />
+
+          <ul class="reviews-slider__slides">
+            <label class="reviews-slider__slides-item" for="reviews-slider-1">
+              <p class="slides-item__description">
+                Eiusmod temporl incididunt utys labore dolor magna aliqua sed enim audy.
+                Lorem ipsum do dolor sit amet consectetur adipisicing elit sed eiusmod
+                tempor incididunt.
+              </p>
+              <div class="slides-item__main">
+                <span class="slides-item__main-name">Oliver Zendu</span>
+                <span class="slides-item__main-title">Rental Review</span>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star5"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="reviews-star5" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star4"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="reviews-star4" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star3"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="reviews-star3" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star2"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="reviews-star2" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star1"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="reviews-star1" title="text"></label>
+                </div>
+              </div>
+            </label>
+            <label class="reviews-slider__slides-item" for="reviews-slider-2">
+              <p class="slides-item__description">
+                Eiusmod temporl incididunt utys labore dolor magna aliqua sed enim audy.
+                Lorem ipsum do dolor sit amet consectetur adipisicing elit sed eiusmod
+                tempor incididunt.
+              </p>
+              <div class="slides-item__main">
+                <span class="slides-item__main-name">Ameda Hilson </span>
+                <span class="slides-item__main-title">Rental Review</span>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star10"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="reviews-star10" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star9"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="reviews-star9" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star8"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="reviews-star8" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star7"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="reviews-star7" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star6"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="reviews-star6" title="text"></label>
+                </div>
+              </div>
+            </label>
+            <label class="reviews-slider__slides-item" for="reviews-slider-3">
+              <p class="slides-item__description">
+                Eiusmod temporl incididunt utys labore dolor magna aliqua sed enim audy.
+                Lorem ipsum do dolor sit amet consectetur adipisicing elit sed eiusmod
+                tempor incididunt.
+              </p>
+              <div class="slides-item__main">
+                <span class="slides-item__main-name">Linus William </span>
+                <span class="slides-item__main-title">Rental Review</span>
+                <div class="rate">
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star15"
+                    name="rate"
+                    value="5"
+                  />
+                  <label class="rate__label" for="reviews-star15" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star14"
+                    name="rate"
+                    value="4"
+                  />
+                  <label class="rate__label" for="reviews-star14" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star13"
+                    name="rate"
+                    value="3"
+                  />
+                  <label class="rate__label" for="reviews-star13" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star12"
+                    name="rate"
+                    value="2"
+                  />
+                  <label class="rate__label" for="reviews-star12" title="text"></label>
+                  <input
+                    class="rate__input"
+                    type="radio"
+                    id="reviews-star11"
+                    name="rate"
+                    value="1"
+                  />
+                  <label class="rate__label" for="reviews-star11" title="text"></label>
+                </div>
+              </div>
+            </label>
+          </ul>
+
+          <ul class="reviews-slider__thumbnails">
+            <label class="reviews-slider__thumbnails-item" for="reviews-slider-1"></label>
+            <label class="reviews-slider__thumbnails-item" for="reviews-slider-2"></label>
+            <label class="reviews-slider__thumbnails-item" for="reviews-slider-3"></label>
+          </ul>
+        </section>
+      </article>
+      <article class="partners">
+        <h2 class="partners__heading">As Seen &amp; featured In...</h2>
+        <ul class="partners__list">
+          <li class="partners__list-item">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./assets/svgs/partners-logo.svg#milk"></use>
+            </svg>
+          </li>
+          <li class="partners__list-item">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./assets/svgs/partners-logo.svg#play"></use>
+            </svg>
+          </li>
+          <li class="partners__list-item">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./assets/svgs/partners-logo.svg#lirik"></use>
+            </svg>
+          </li>
+          <li class="partners__list-item">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./assets/svgs/partners-logo.svg#ark"></use>
+            </svg>
+          </li>
+          <li class="partners__list-item">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./assets/svgs/partners-logo.svg#eight"></use>
+            </svg>
+          </li>
+        </ul>
+      </article>
+    </main>
+    <div class="wrapper"></div>
+    <footer class="footer">
+      <div class="footer__logo">
+        <h2 class="footer__logo-title">Doremi</h2>
+        <span class="footer__logo-description">Buy, Sell Or Rent</span>
+      </div>
+      <p class="footer__description">
+        Eiusmod tempora incididunt dolore magna aliqua sed enim lorem ipsum sit amet
+        consectetur.
+      </p>
+      <div class="footer__ameda">
+        <h3 class="footer__ameda-heading">Ameda Hilson</h3>
+        <ul class="footer__ameda-list">
+          <li>Our Company</li>
+          <li>Our Blog</li>
+          <li>Support</li>
+          <li>How It Works</li>
+          <li>List An Item</li>
+          <li>Disclaimers</li>
+        </ul>
+      </div>
+      <div class="footer__other">
+        <h3 class="footer__other-heading">Other Links</h3>
+        <ul class="footer__other-list">
+          <li>Login Or Register</li>
+          <li>Gurantee</li>
+          <li>Browse Items</li>
+          <li>Read FAQ&apos;s</li>
+          <li>Terms of Service</li>
+          <li>Leave Feedback</li>
+        </ul>
+      </div>
+      <address class="footer__address">
+        <ul class="footer__address-info">
+          <li class="footer__address-info-item">
+            <p>
+              <span class="bold">Email:</span>
+              <a href="mailto:support@domain.com" class="footer__link"
+                >support@domain.com</a
+              >
+            </p>
+          </li>
+          <li class="footer__address-info-item">
+            <p>
+              <span class="bold">Phone:</span>
+              <a href="tel:+104023513690" class="footer__link">+1 (040) 2351 3690</a>
+            </p>
+          </li>
+        </ul>
+        <div class="footer__community">
+          <h3 class="footer__community-heading">Join Our Community</h3>
+          <p class="footer__community-description">
+            Continue exploring the great places.
+          </p>
+        </div>
+        <ul class="footer__app-stores">
+          <li class="footer__app-stores-item">
+            <button class="footer__store-button">
+              <img
+                src=""
+                alt=""
+                srcset="
+                  ./assets/img/play-store-small.png 768w,
+                  ./assets/img/play-store-big.png   769w
+                "
+              />
+            </button>
+          </li>
+          <li class="footer__app-stores-item">
+            <button class="footer__store-button">
+              <img
+                src=""
+                alt=""
+                srcset="
+                  ./assets/img/apple-store-small.png 768w,
+                  ./assets/img/apple-store-big.png   769w
+                "
+              />
+            </button>
+          </li>
+        </ul>
+        <div class="footer__social">
+          <h3 class="footer__social-heading">Connect Socially</h3>
+          <ul class="footer__social-links">
+            <li class="footer__social-links-item">
+              <svg
+                class="footer__social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="44"
+              >
+                <use xlink:href="./assets/svgs/footer_socials.svg#twitter-logo"></use>
+              </svg>
+            </li>
+            <li class="footer__social-links-item">
+              <svg
+                class="footer__social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="44"
+              >
+                <use xlink:href="./assets/svgs/footer_socials.svg#facebook-logo"></use>
+              </svg>
+            </li>
+            <li class="footer__social-links-item">
+              <svg
+                class="footer__social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="44"
+              >
+                <use xlink:href="./assets/svgs/footer_socials.svg#insta-logo"></use>
+              </svg>
+            </li>
+            <li class="footer__social-links-item">
+              <svg
+                class="footer__social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="44"
+              >
+                <use xlink:href="./assets/svgs/footer_socials.svg#pinterest-logo"></use>
+              </svg>
+            </li>
+            <li class="footer__social-links-item">
+              <svg
+                class="footer__social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="44"
+              >
+                <use xlink:href="./assets/svgs/footer_socials.svg#youtube-logo"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </address>
+      <hr class="footer__separator" />
+      <p class="footer__copy">
+        &copy; 2020 Doremi - Buy Sell or Rent. All rights reserved.
+      </p>
+    </footer>
+  </body>
+
+  <script>
+    window.onscroll = function () {
+      addSticky();
+    };
+
+    const header = document.querySelector("#header");
+    const homeArticle = document.querySelector("#homeArticle");
+    const headerMenu = document.querySelector("#headerMenu");
+    let sticky = header.offsetTop;
+    let headerHeight = header.offsetHeight;
+
+    function addSticky() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+        homeArticle.style.marginTop = `${headerHeight}px`;
+        headerMenu.style.top = "100%";
+        return;
+      }
+
+      header.classList.remove("sticky");
+      headerMenu.style.removeProperty
+        ? headerMenu.style.removeProperty(`top`)
+        : headerMenu.style.removeAttribute(`top`);
+
+      let m = parseFloat(homeArticle.style.marginTop) - headerHeight;
+      homeArticle.style.marginTop = `${m}px`;
+    }
+  </script>
+</html>

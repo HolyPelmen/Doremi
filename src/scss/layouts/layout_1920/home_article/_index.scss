@@ -1,0 +1,5 @@
+@import "./vars";
+
+.article-home {
+  padding: $homeArticleTopPadding 0 $homeArticleBotPadding $homeArticleLeftPadding;
+}

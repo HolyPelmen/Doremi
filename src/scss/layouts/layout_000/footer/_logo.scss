@@ -1,0 +1,17 @@
+.footer__logo {
+  position: relative;
+  margin-left: rem($footerLogoSize + $footerLogoDistanceToText);
+  @include m(title) {
+    @include setTextProperties(nunito, extraBold, $footerCompanyNameSize, lh49);
+    @include unsetAll((margin));
+  }
+  @include m(description) {
+    @include setTextProperties(quicksand, regular, $footerSloganSize, lh17);
+    letter-spacing: $footerSubtitleLetterSpacing;
+  }
+
+  &::before {
+    @include beforeAfterConstructorSquare(rem($footerLogoSize), "logo.svg");
+    @include positioning(15%, rem(-($footerLogoSize + $footerLogoDistanceToText)));
+  }
+}

@@ -1,0 +1,7 @@
+@import "./vars";
+@import "./description_content";
+
+.product-categories {
+  padding-left: $categoriesSidesPaddings;
+  padding-right: $categoriesSidesPaddings;
+}

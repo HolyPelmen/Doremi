@@ -1,0 +1,19 @@
+@include unsetSlider("reviews-slider", $reviewsCardNumber);
+
+.reviews-slider {
+  @include e(slides) {
+    padding: 0;
+    @include setFlex(row, center, center, $reviewCardsGap);
+    @include m(item) {
+      transform: scale(1);
+    }
+  }
+
+  @include e(thumbnails) {
+    display: none;
+  }
+
+  @include e(radio) {
+    display: none;
+  }
+}

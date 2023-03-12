@@ -1,0 +1,41 @@
+.featured-carousel {
+  gap: rem($featuredSliderThumbnailGap);
+  @include e(slides) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: rem($featuredSlidesColGap);
+    grid-row-gap: rem($featuredSlidesRowGap);
+    padding: unset;
+    @include m(item) {
+      transform: scale(1);
+      align-items: flex-start;
+      &:nth-of-type(1) {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      &:nth-of-type(2) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      &:nth-of-type(3) {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+      &:nth-of-type(4) {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      &:nth-of-type(5) {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+      &:nth-of-type(6) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+  }
+  @include e(thumbnails) {
+    display: none;
+  }
+  @include e(radio) {
+    display: none;
+  }
+}
+
+@include unsetSlider("featured-carousel", $featuredNumberOfCards);

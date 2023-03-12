@@ -1,0 +1,6 @@
+.partners__list {
+  grid-template-columns: repeat(5, minmax(150px, 220px));
+  grid-column-gap: 2.1875rem;
+  @include unsetAll((grid-template-rows, grid-row-gap, min-height));
+  place-content: center;
+}

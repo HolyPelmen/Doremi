@@ -1,0 +1,5 @@
+.product-categories__description {
+  @include m(subtitle) {
+    @include getCssVar(font-family, quicksand);
+  }
+}

@@ -1,0 +1,22 @@
+.article-home__title {
+  @include setFlex(
+    column,
+    center,
+    flex-start,
+    rem($distanceBetweenArticleAndDescription)
+  );
+  margin-bottom: rem(
+    calculateNegativeMargin($marginBottomForArticle, $maxGapBetweenElements)
+  );
+  @include m(article) {
+    @include setTextProperties(nunito, bold, $baseHeaderSize, lh49);
+    max-width: $maxWidthForArticleHeader;
+    @include resetAllToZero((margin));
+  }
+
+  @include m(description) {
+    @include setTextProperties(lato, light, $mediumSubheaderSize, lh19);
+    @include resetAllToZero((margin));
+    max-width: $maxWidthForArticleDescription;
+  }
+}

@@ -1,0 +1,8 @@
+.advantages__title {
+  @include setTextProperties(nunito, bold, $mediumHeaderSize, lh44);
+  @include unsetAll((margin));
+  width: 75%;
+  margin-bottom: rem(
+    calculateNegativeMargin($advantagesHeaderSectionsGap, $advantagesGaps)
+  );
+}

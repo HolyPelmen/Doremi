@@ -1,0 +1,7 @@
+@import "./header-vars";
+@import "./header-logo";
+@import "./header-menu";
+
+.header {
+  @include getCssVar(background, alice-blue);
+}

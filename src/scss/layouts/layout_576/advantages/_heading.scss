@@ -1,0 +1,4 @@
+.advantages__title {
+  @include setTextProperties(nunito, bold, $mediumHeaderSize, lh44);
+  width: 100%;
+}

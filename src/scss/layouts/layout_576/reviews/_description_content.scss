@@ -1,0 +1,9 @@
+.reviews__content {
+  @include m(heading) {
+    @include setTextProperties(nunito, bold, $mediumHeaderSize, lh44);
+  }
+
+  @include m(description) {
+    @include setTextProperties(lato, regular, $smallSubheaderSize, lh26);
+  }
+}

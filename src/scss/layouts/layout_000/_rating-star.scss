@@ -1,0 +1,41 @@
+.rate {
+  @include setFlex(row-reverse, center);
+  height: rem($starHeight);
+  overflow: hidden;
+  position: relative;
+
+  &:not(:checked) > &__input {
+    display: none;
+  }
+
+  @include e(label) {
+    cursor: pointer;
+    width: rem($starWidth);
+    height: rem($starHeight);
+    background-image: svg("unfilled-star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+  }
+
+  &__input:checked ~ &__label,
+  &__input:checked ~ &__label ~ &__label {
+    background-image: svg("filled-star.svg");
+  }
+
+  &__input:not(:checked) ~ &__label:hover,
+  &__input:not(:checked) ~ &__label:hover ~ &__label {
+    background-image: svg("filled-star.svg");
+    filter: brightness(90%);
+  }
+
+  // &::before {
+  //   @include beforeAfterConstructorRect($reviewsWidth, $reviewHeight) {
+  //     content: "(205 Reviews)";
+  //     position: relative;
+  //     @include positioning(25%, $reviewLeftPos);
+  //   }
+  //   @include setTextProperties(quicksand, regular, $subRegulatTextSize, lh10);
+  //   @include getCssVar(color, dark-grey);
+  // }
+}

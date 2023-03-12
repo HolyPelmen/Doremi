@@ -1,0 +1,5 @@
+.header__menu {
+  @include m(list) {
+    @include positioning(15.4%, 0);
+  }
+}
